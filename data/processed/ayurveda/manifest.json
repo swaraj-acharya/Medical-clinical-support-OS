@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-09-25T17:34:08.762Z",
+  "inputs": {
+    "herbs": "93a7dd1f244b931e5dcf82a9fe37112d549370c05b6c0eefb2b1cd81ae8a4140",
+    "formulations": "daa460151146108a2da149ef2c6201013732d60c84a3f910cdacefe301856664",
+    "principles": "ebf1ffc3a0283596b8e1c85307beb30d878283a860cafb81a23cca8b9e40871c"
+  },
+  "counts": {
+    "herbs": 360,
+    "formulations": 176,
+    "principles": 162,
+    "formulationsWithMineralsOrMetals": 59,
+    "formulationIngredientsLinkedToHerbs": 300
+  },
+  "excludedFields": [
+    "herb.preview (promotional prose)",
+    "herb.image"
+  ],
+  "license": "CC BY 4.0 — attribution: Varshney S., Amidha Ayurveda open datasets (see DATA_LICENSES.md)"
+}

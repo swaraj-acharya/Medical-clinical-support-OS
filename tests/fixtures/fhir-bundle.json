@@ -1,0 +1,14 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    { "resource": { "resourceType": "Patient", "id": "synthetic-001", "gender": "female", "birthDate": "1990-03-14" } },
+    { "resource": { "resourceType": "Condition", "id": "c1", "code": { "coding": [{ "system": "http://snomed.info/sct", "display": "Headache (finding)" }], "text": "Headache" } } },
+    { "resource": { "resourceType": "Condition", "id": "c2", "code": { "text": "Fever" } } },
+    { "resource": { "resourceType": "Condition", "id": "c3", "code": { "text": "Prediabetes" } } },
+    { "resource": { "resourceType": "Observation", "id": "o1", "category": [{ "coding": [{ "code": "vital-signs" }] }], "code": { "coding": [{ "system": "http://loinc.org", "code": "8310-5" }] }, "valueQuantity": { "value": 38.4, "unit": "Cel" } } },
+    { "resource": { "resourceType": "Observation", "id": "o2", "category": [{ "coding": [{ "code": "vital-signs" }] }], "code": { "coding": [{ "system": "http://loinc.org", "code": "8867-4" }] }, "valueQuantity": { "value": 96, "unit": "/min" } } },
+    { "resource": { "resourceType": "MedicationStatement", "id": "m1", "medicationCodeableConcept": { "text": "Paracetamol 500 mg" } } },
+    { "resource": { "resourceType": "AllergyIntolerance", "id": "a1", "code": { "text": "Penicillin" } } }
+  ]
+}

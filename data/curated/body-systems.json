@@ -1,0 +1,114 @@
+[
+ {
+  "id": "neuro",
+  "label": "Head & nervous system",
+  "repertoryChapters": [
+   "Head",
+   "Vertigo",
+   "Mind"
+  ]
+ },
+ {
+  "id": "general",
+  "label": "General / constitutional",
+  "repertoryChapters": [
+   "Generalities",
+   "Fever",
+   "Chill",
+   "Perspiration"
+  ]
+ },
+ {
+  "id": "respiratory",
+  "label": "Respiratory",
+  "repertoryChapters": [
+   "Cough",
+   "Respiration",
+   "Chest",
+   "Larynx and trachea"
+  ]
+ },
+ {
+  "id": "ent",
+  "label": "Ear, nose, throat & eyes",
+  "repertoryChapters": [
+   "Nose",
+   "Throat",
+   "Ear",
+   "Eye"
+  ]
+ },
+ {
+  "id": "gastrointestinal",
+  "label": "Digestive",
+  "repertoryChapters": [
+   "Stomach",
+   "Abdomen",
+   "Rectum",
+   "Stool"
+  ]
+ },
+ {
+  "id": "cardiovascular",
+  "label": "Heart & circulation",
+  "repertoryChapters": [
+   "Chest",
+   "Heart & Circulation"
+  ]
+ },
+ {
+  "id": "genitourinary",
+  "label": "Urinary",
+  "repertoryChapters": [
+   "Bladder",
+   "Urethra",
+   "Kidneys",
+   "Urine"
+  ]
+ },
+ {
+  "id": "musculoskeletal",
+  "label": "Musculoskeletal",
+  "repertoryChapters": [
+   "Extremities",
+   "Back"
+  ]
+ },
+ {
+  "id": "skin",
+  "label": "Skin",
+  "repertoryChapters": [
+   "Skin"
+  ]
+ },
+ {
+  "id": "mental",
+  "label": "Mind, mood & sleep",
+  "repertoryChapters": [
+   "Mind",
+   "Sleep"
+  ]
+ },
+ {
+  "id": "paediatric",
+  "label": "Paediatric danger signs",
+  "repertoryChapters": []
+ },
+ {
+  "id": "obstetric",
+  "label": "Pregnancy-related",
+  "repertoryChapters": [
+   "Genitalia female"
+  ]
+ },
+ {
+  "id": "trauma",
+  "label": "Trauma",
+  "repertoryChapters": []
+ },
+ {
+  "id": "toxicology",
+  "label": "Poisoning & envenomation",
+  "repertoryChapters": []
+ }
+]

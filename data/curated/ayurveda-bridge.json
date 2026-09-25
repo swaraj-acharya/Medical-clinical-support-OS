@@ -1,0 +1,837 @@
+{
+ "_comment": "Hand-curated Ayurveda reasoning layer. Terms are approximate correlates for retrieval, not NAMASTE mappings.",
+ "indications": [
+  {
+   "term": "jwara",
+   "label": "Jwara (fever)",
+   "variants": [
+    "jvara",
+    "jwar"
+   ],
+   "symptomIds": [
+    "sym_fever"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "kasa",
+   "label": "Kasa (cough)",
+   "variants": [
+    "kaas",
+    "kasa roga",
+    "kapha kasa"
+   ],
+   "symptomIds": [
+    "sym_cough"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "shwasa",
+   "label": "Shwasa (dyspnoea / wheeze)",
+   "variants": [
+    "swasa",
+    "shvasa",
+    "tamaka shwasa"
+   ],
+   "symptomIds": [
+    "sym_shortness_of_breath",
+    "sym_wheeze"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "pratishyaya",
+   "label": "Pratishyaya (coryza / rhinitis)",
+   "variants": [
+    "pinasa",
+    "peenasa",
+    "pratishyay"
+   ],
+   "symptomIds": [
+    "sym_runny_nose",
+    "sym_sneezing",
+    "sym_nasal_congestion"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "shirahshula",
+   "label": "Shirahshula (headache)",
+   "variants": [
+    "shirashoola",
+    "shirahshoola",
+    "shiroroga",
+    "shira shula",
+    "shirashula",
+    "shiroga"
+   ],
+   "symptomIds": [
+    "sym_headache"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "ardhavabhedaka",
+   "label": "Ardhavabhedaka (unilateral / hemicranial headache)",
+   "variants": [
+    "ardhavabhedak",
+    "ardhavbhedak"
+   ],
+   "symptomIds": [
+    "sym_headache"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md). Applied only when the headache is recorded as one-sided (Ardhavabhedaka = half-sided head pain).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   },
+   "requiresDetail": {
+    "symptomId": "sym_headache",
+    "field": "laterality",
+    "anyOf": [
+     "left",
+     "right",
+     "alternating"
+    ]
+   }
+  },
+  {
+   "term": "amlapitta",
+   "label": "Amlapitta (hyperacidity / acid dyspepsia)",
+   "variants": [
+    "amla pitta",
+    "hyperacidity"
+   ],
+   "symptomIds": [
+    "sym_heartburn",
+    "sym_acid_regurgitation"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "ajirna",
+   "label": "Ajirna (indigestion)",
+   "variants": [
+    "ajeerna",
+    "ajirn",
+    "indigestion"
+   ],
+   "symptomIds": [
+    "sym_indigestion"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "agnimandya",
+   "label": "Agnimandya (diminished digestive fire)",
+   "variants": [
+    "mandagni",
+    "agni mandya",
+    "low digestive fire",
+    "deepana"
+   ],
+   "symptomIds": [
+    "sym_indigestion",
+    "sym_loss_of_appetite"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "aruchi",
+   "label": "Aruchi (anorexia / loss of taste for food)",
+   "variants": [
+    "arochak",
+    "arochaka",
+    "loss of appetite"
+   ],
+   "symptomIds": [
+    "sym_loss_of_appetite"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "chhardi",
+   "label": "Chhardi (vomiting / nausea)",
+   "variants": [
+    "chardi",
+    "vamana vega",
+    "hrillasa"
+   ],
+   "symptomIds": [
+    "sym_vomiting",
+    "sym_nausea"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "vibandha",
+   "label": "Vibandha (constipation)",
+   "variants": [
+    "malabaddhata",
+    "malavibandha",
+    "constipation",
+    "anulomana"
+   ],
+   "symptomIds": [
+    "sym_constipation"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "atisara",
+   "label": "Atisara (diarrhoea)",
+   "variants": [
+    "atisar",
+    "pravahika",
+    "grahani"
+   ],
+   "symptomIds": [
+    "sym_diarrhoea"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "adhmana",
+   "label": "Adhmana / Anaha (abdominal distension)",
+   "variants": [
+    "anaha",
+    "adhman",
+    "bloating",
+    "gas"
+   ],
+   "symptomIds": [
+    "sym_bloating"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "udarashula",
+   "label": "Udarashula (abdominal pain)",
+   "variants": [
+    "udara shoola",
+    "udara shula",
+    "shoola",
+    "shula",
+    "abdominal pain"
+   ],
+   "symptomIds": [
+    "sym_abdominal_pain"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "daha",
+   "label": "Daha (burning sensation)",
+   "variants": [
+    "dah"
+   ],
+   "symptomIds": [
+    "sym_heartburn",
+    "sym_burning_micturition"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "kandu",
+   "label": "Kandu (itching)",
+   "variants": [
+    "kandoo",
+    "itching",
+    "pama"
+   ],
+   "symptomIds": [
+    "sym_itching"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "kushtha",
+   "label": "Kushtha (skin disease, broad category)",
+   "variants": [
+    "kushta",
+    "twak roga",
+    "skin diseases"
+   ],
+   "symptomIds": [
+    "sym_rash",
+    "sym_itching"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "sandhishula",
+   "label": "Sandhishula (joint pain)",
+   "variants": [
+    "sandhishoola",
+    "sandhivata",
+    "sandhi vata",
+    "sandhigata vata",
+    "joint pain",
+    "amavata",
+    "arthritis"
+   ],
+   "symptomIds": [
+    "sym_joint_pain"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "katishula",
+   "label": "Katishula (low back pain)",
+   "variants": [
+    "kati shoola",
+    "katigraha",
+    "gridhrasi",
+    "sciatica"
+   ],
+   "symptomIds": [
+    "sym_back_pain"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "angamarda",
+   "label": "Angamarda (body ache)",
+   "variants": [
+    "anga marda",
+    "body aches",
+    "vedana"
+   ],
+   "symptomIds": [
+    "sym_body_ache"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "vata vyadhi",
+   "label": "Vata vyadhi (vata disorders, broad category)",
+   "variants": [
+    "vatavyadhi",
+    "vata-vyadhi",
+    "vataroga"
+   ],
+   "symptomIds": [
+    "sym_joint_pain",
+    "sym_back_pain",
+    "sym_body_ache"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "anidra",
+   "label": "Anidra (insomnia)",
+   "variants": [
+    "nidranasha",
+    "nidra nasha",
+    "insomnia"
+   ],
+   "symptomIds": [
+    "sym_insomnia"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "chittodvega",
+   "label": "Chittodvega (anxiety)",
+   "variants": [
+    "chittodvega",
+    "anxiety",
+    "manasa roga",
+    "manasavikara"
+   ],
+   "symptomIds": [
+    "sym_anxiety"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "vishada",
+   "label": "Vishada (low mood)",
+   "variants": [
+    "avasada"
+   ],
+   "symptomIds": [
+    "sym_low_mood"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "bhrama",
+   "label": "Bhrama (giddiness / vertigo)",
+   "variants": [
+    "bhram",
+    "vertigo"
+   ],
+   "symptomIds": [
+    "sym_dizziness"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "daurbalya",
+   "label": "Daurbalya (weakness / debility)",
+   "variants": [
+    "dourbalya",
+    "debility",
+    "general debility",
+    "shrama",
+    "klama"
+   ],
+   "symptomIds": [
+    "sym_fatigue"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "mutrakricchra",
+   "label": "Mutrakricchra (dysuria)",
+   "variants": [
+    "mutrakrichha",
+    "mutrakrichhra",
+    "mutrakrichra",
+    "mutraghata",
+    "urinary tract disorders"
+   ],
+   "symptomIds": [
+    "sym_burning_micturition",
+    "sym_urinary_frequency"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "kamala",
+   "label": "Kamala (jaundice)",
+   "variants": [
+    "jaundice"
+   ],
+   "symptomIds": [
+    "sym_jaundice"
+   ],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "term": "trishna",
+   "label": "Trishna (morbid thirst)",
+   "variants": [],
+   "symptomIds": [],
+   "mappingType": "approximate-correlate",
+   "namasteCode": null,
+   "note": "Approximate clinical correlate for retrieval only. Not a NAMASTE code mapping; NAMASTE codes are not bundled (see DATA_SOURCES.md).",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Curated Ayurveda terminology bridge v1 — approximate correlates, NOT a NAMASTE mapping",
+    "lastVerified": "2026-09-25"
+   }
+  }
+ ],
+ "rules": {
+  "doshaSupport": {
+   "pitta-vriddhi": {
+    "pacifies": "Pitta",
+    "cautionIfAggravates": "Pitta",
+    "cautionVirya": "Ushna",
+    "principleIds": [
+     "prin_dosha",
+     "prin_virya"
+    ],
+    "sources": [
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Dosha (Siddhanta Kosha principle prin_dosha)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     },
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Virya (Siddhanta Kosha principle prin_virya)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     }
+    ],
+    "text": "Observed Pitta vriddhi: dravyas recorded as Pitta-pacifying are marked as supporting; dravyas recorded as Pitta-aggravating or of Ushna virya are flagged for review (classical rationale, not an objective measurement)."
+   },
+   "kapha-vriddhi": {
+    "pacifies": "Kapha",
+    "cautionIfAggravates": "Kapha",
+    "cautionVirya": null,
+    "principleIds": [
+     "prin_dosha"
+    ],
+    "sources": [
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Dosha (Siddhanta Kosha principle prin_dosha)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     }
+    ],
+    "text": "Observed Kapha vriddhi: Kapha-pacifying dravyas marked as supporting; Kapha-aggravating dravyas flagged for review."
+   },
+   "vata-vriddhi": {
+    "pacifies": "Vata",
+    "cautionIfAggravates": "Vata",
+    "cautionVirya": null,
+    "principleIds": [
+     "prin_dosha"
+    ],
+    "sources": [
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Dosha (Siddhanta Kosha principle prin_dosha)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     }
+    ],
+    "text": "Observed Vata vriddhi: Vata-pacifying dravyas marked as supporting; Vata-aggravating dravyas flagged for review."
+   }
+  },
+  "agni": {
+   "manda": {
+    "supportTerms": [
+     "agnimandya",
+     "mandagni",
+     "deepana",
+     "pachana",
+     "ajirna",
+     "ajeerna",
+     "aruchi",
+     "low digestive fire"
+    ],
+    "principleIds": [
+     "prin_manda_agni",
+     "prin_agni"
+    ],
+    "sources": [
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Manda Agni (Siddhanta Kosha principle prin_manda_agni)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     }
+    ],
+    "text": "Manda agni recorded: formulations/herbs with recorded Deepana/Pachana or Agnimandya indications are marked as contextually relevant."
+   },
+   "tikshna": {
+    "cautionVirya": "Ushna",
+    "principleIds": [
+     "prin_tikshna_agni"
+    ],
+    "sources": [
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Tikshna Agni (prin_tikshna_agni)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     }
+    ],
+    "text": "Tikshna agni recorded: Ushna-virya dravyas flagged for review."
+   }
+  },
+  "ama": {
+   "present": {
+    "supportTerms": [
+     "ama pachana",
+     "pachana",
+     "deepana",
+     "indigestion with ama",
+     "ama"
+    ],
+    "principleIds": [
+     "prin_ama",
+     "prin_nirama_sama"
+    ],
+    "sources": [
+     {
+      "sourceId": "siddhanta-kosha",
+      "reference": "Ama (Siddhanta Kosha principle prin_ama)",
+      "lastVerified": "2026-09-25",
+      "url": "https://doi.org/10.5281/zenodo.17481343",
+      "version": "1.0.0"
+     }
+    ],
+    "text": "Ama recorded as present: the classical line of treatment emphasises Ama pachana and strengthening Agni first; formulations with recorded Ama-pachana/Deepana indications are marked as contextually relevant."
+   }
+  }
+ },
+ "herbSafety": [
+  {
+   "herbId": "herb_ashwagandha",
+   "note": {
+    "id": "sn_ashwagandha_liver",
+    "level": "warning",
+    "text": "Rare cases of clinically apparent liver injury (typically cholestatic or mixed, onset ~2–12 weeks after starting) have been reported with ashwagandha products. Avoid in known liver disease; stop if jaundice or pruritus develops.",
+    "source": {
+     "sourceId": "livertox",
+     "reference": "LiverTox: Ashwagandha (NBK548536)",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK548536/"
+    }
+   },
+   "tagsHighRisk": [
+    "hepatic-mild",
+    "hepatic-moderate",
+    "hepatic-severe"
+   ]
+  }
+ ],
+ "generalSafety": {
+  "rasaushadhi": {
+   "id": "sn_rasaushadhi",
+   "text": "Contains mineral/metal ingredients (Rasaushadhi / bhasma). Heavy-metal content has been documented in about one fifth of Ayurvedic products sold online (Saper et al., JAMA 2008). Use only products with verified GMP and heavy-metal testing; specialist review is required, particularly in pregnancy, breastfeeding, children and renal impairment.",
+   "source": {
+    "sourceId": "pubmed",
+    "reference": "Saper RB et al. Lead, mercury, and arsenic in US- and Indian-manufactured Ayurvedic medicines sold via the Internet. JAMA 2008;300(8):915-923",
+    "lastVerified": "2026-09-25",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Saper+2008+Ayurvedic+medicines+sold+via+the+Internet+lead+mercury+arsenic"
+   },
+   "highRiskTags": [
+    "pregnant",
+    "breastfeeding",
+    "age-under-18",
+    "renal-mild",
+    "renal-moderate",
+    "renal-severe"
+   ]
+  },
+  "pregnancy": {
+   "id": "sn_ayur_pregnancy",
+   "text": "Safety in pregnancy/breastfeeding is not verified in the current knowledge base for this item. Clinician review required.",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Ayurveda pregnancy/breastfeeding safety gating rule",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  "herbDrug": {
+   "id": "sn_herb_drug",
+   "text": "Herb–drug interaction data are not held in the current knowledge base. The patient takes {classes}; review for potential herb–drug interactions before co-administration.",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Herb–drug interaction review rule",
+    "lastVerified": "2026-09-25"
+   },
+   "classTags": [
+    "anticoagulant",
+    "antiplatelet",
+    "antidiabetic",
+    "antihypertensive",
+    "narrow-therapeutic-index",
+    "ssri"
+   ]
+  },
+  "noModernEvidence": {
+   "text": "No modern clinical evidence is recorded for this item in the current knowledge base. Traditional/classical rationale only.",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Evidence-gap disclosure rule",
+    "lastVerified": "2026-09-25"
+   }
+  }
+ }
+}

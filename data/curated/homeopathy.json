@@ -1,0 +1,727 @@
+{
+ "_comment": "Hand-curated homeopathy layer: evidence framing, toxic-source flags, and symptom→rubric hints (hints are suggestions for clinician selection; rubric paths verified to exist in Repertorium Publicum).",
+ "evidence": [
+  {
+   "category": "insufficient-evidence",
+   "summary": "A systematic assessment by Australia's NHMRC concluded there are no health conditions for which there is reliable evidence that homeopathy is effective.",
+   "source": {
+    "sourceId": "nhmrc",
+    "reference": "NHMRC Information Paper: Evidence on the effectiveness of homeopathy for treating health conditions (2015)",
+    "lastVerified": "2026-09-25",
+    "url": "https://www.nhmrc.gov.au/sites/default/files/images/nhmrc-information-paper-effectiveness-of-homeopathy.pdf",
+    "version": "2015"
+   }
+  },
+  {
+   "category": "insufficient-evidence",
+   "summary": "The Royal Australian College of General Practitioners' position (2025) describes the certainty of evidence for homeopathy as low or very low.",
+   "source": {
+    "sourceId": "racgp",
+    "reference": "RACGP position on homeopathy (informed by the Natural Therapies Review 2024)",
+    "lastVerified": "2026-09-25",
+    "url": "https://www.racgp.org.au/",
+    "version": "2025"
+   }
+  },
+  {
+   "category": "conflicting-evidence",
+   "summary": "Homeopathy organisations have published methodological critiques of the NHMRC review; these critiques are recorded here so the disagreement is visible rather than resolved by this tool.",
+   "source": {
+    "sourceId": "cds-curated",
+    "reference": "Conflict disclosure — critiques published in homeopathy literature (e.g., the journal Homeopathy)",
+    "lastVerified": "2026-09-25"
+   }
+  },
+  {
+   "category": "repertory-reference",
+   "summary": "Repertory grades (1–3) reflect the typographic emphasis given by repertory authors to remedy–symptom associations recorded in provings and clinical reports. They are not probabilities and not measures of efficacy.",
+   "source": {
+    "sourceId": "oorep",
+    "reference": "Repertorium Publicum (OOREP)",
+    "lastVerified": "2026-09-25",
+    "url": "https://www.oorep.com/",
+    "version": "0.5"
+   }
+  }
+ ],
+ "regulatory": {
+  "text": "Homoeopathy is a recognised system of medicine in India, regulated by the National Commission for Homoeopathy under the National Commission for Homoeopathy Act, 2020. Recognition as a system of practice is a regulatory fact and is not evidence of clinical efficacy.",
+  "source": {
+   "sourceId": "nch",
+   "reference": "National Commission for Homoeopathy — Acts, rules and regulations",
+   "lastVerified": "2026-09-25",
+   "url": "https://www.nch.org.in/nch-gazetted-rules-and-regulations"
+  }
+ },
+ "toxicSource": [
+  {
+   "abbrev": "Acon.",
+   "material": "Aconitum napellus — aconite alkaloids (cardiotoxic)",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Bell.",
+   "material": "Atropa belladonna — tropane alkaloids (anticholinergic)",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    },
+    {
+     "sourceId": "fda",
+     "reference": "FDA 2017: laboratory analysis found inconsistent belladonna amounts in homeopathic teething tablets",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.fda.gov/",
+     "version": "2017"
+    }
+   ]
+  },
+  {
+   "abbrev": "Nux-v.",
+   "material": "Strychnos nux-vomica — strychnine",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Ars.",
+   "material": "Arsenic trioxide",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Merc.",
+   "material": "Mercury compounds",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Plb.",
+   "material": "Lead",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Gels.",
+   "material": "Gelsemium sempervirens — gelsemine alkaloids",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Hyos.",
+   "material": "Hyoscyamus niger — tropane alkaloids",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Stram.",
+   "material": "Datura stramonium — tropane alkaloids",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Verat.",
+   "material": "Veratrum album — veratrum alkaloids",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Phos.",
+   "material": "Phosphorus",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Canth.",
+   "material": "Cantharis — cantharidin",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Dig.",
+   "material": "Digitalis purpurea — cardiac glycosides",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Lach.",
+   "material": "Snake venom (Lachesis)",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Crot-h.",
+   "material": "Snake venom (Crotalus)",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Cupr.",
+   "material": "Copper",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Thuj.",
+   "material": "Thuja occidentalis — thujone",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Rhus-t.",
+   "material": "Toxicodendron — urushiol",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Coloc.",
+   "material": "Citrullus colocynthis — cucurbitacins",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Apis",
+   "material": "Bee venom (relevant to bee-venom allergy)",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Con.",
+   "material": "Conium maculatum — coniine",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Op.",
+   "material": "Opium alkaloids (may be controlled at low dilutions)",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "abbrev": "Sec.",
+   "material": "Ergot alkaloids",
+   "note": "Toxic source material. Safety depends on the degree of dilution and manufacturing quality; mother tinctures and low potencies can contain measurable amounts of the source substance.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Source-material toxicology note (pending pharmacist verification)",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  }
+ ],
+ "symptomRubrics": {
+  "sym_headache": [
+   "Head, pain"
+  ],
+  "sym_fever": [
+   "Fever"
+  ],
+  "sym_chills": [
+   "Chill"
+  ],
+  "sym_cough": [
+   "Cough"
+  ],
+  "sym_sore_throat": [
+   "Throat, pain"
+  ],
+  "sym_runny_nose": [
+   "Nose, coryza"
+  ],
+  "sym_sneezing": [
+   "Nose, sneezing"
+  ],
+  "sym_nasal_congestion": [
+   "Nose, obstruction"
+  ],
+  "sym_itchy_eyes": [
+   "Eye, itching",
+   "Eye, lachrymation"
+  ],
+  "sym_nausea": [
+   "Stomach, nausea"
+  ],
+  "sym_vomiting": [
+   "Stomach, vomiting"
+  ],
+  "sym_diarrhoea": [
+   "Rectum, diarrhea"
+  ],
+  "sym_constipation": [
+   "Rectum, constipation"
+  ],
+  "sym_abdominal_pain": [
+   "Abdomen, pain"
+  ],
+  "sym_heartburn": [
+   "Stomach, heartburn"
+  ],
+  "sym_acid_regurgitation": [
+   "Stomach, eructations, sour"
+  ],
+  "sym_indigestion": [
+   "Stomach, indigestion (includes complaints after substances not otherwise described)"
+  ],
+  "sym_bloating": [
+   "Abdomen, distension"
+  ],
+  "sym_loss_of_appetite": [
+   "Appetite, diminished"
+  ],
+  "sym_fatigue": [
+   "Generalities, weakness"
+  ],
+  "sym_dizziness": [
+   "Vertigo"
+  ],
+  "sym_photophobia": [
+   "Eye, photophobia"
+  ],
+  "sym_phonophobia": [
+   "Hearing, acute"
+  ],
+  "sym_shortness_of_breath": [
+   "Respiration, difficult"
+  ],
+  "sym_wheeze": [
+   "Respiration, wheezing"
+  ],
+  "sym_palpitations": [
+   "Heart & Circulation, palpitation"
+  ],
+  "sym_sweating": [
+   "Perspiration"
+  ],
+  "sym_rash": [
+   "Skin, eruptions"
+  ],
+  "sym_itching": [
+   "Skin, itching"
+  ],
+  "sym_joint_pain": [
+   "Extremities, pain, joints"
+  ],
+  "sym_back_pain": [
+   "Back, pain"
+  ],
+  "sym_body_ache": [
+   "Generalities, pain"
+  ],
+  "sym_insomnia": [
+   "Sleep, sleeplessness"
+  ],
+  "sym_anxiety": [
+   "Mind, anxiety"
+  ],
+  "sym_low_mood": [
+   "Mind, sadness"
+  ],
+  "sym_burning_micturition": [
+   "Urethra, pain, burning"
+  ],
+  "sym_urinary_frequency": [
+   "Bladder, urination, frequent"
+  ]
+ },
+ "modifierRubrics": [
+  {
+   "symptomId": "sym_headache",
+   "field": "laterality",
+   "match": [
+    "right"
+   ],
+   "rubric": "Head, pain, sides, right"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "laterality",
+   "match": [
+    "left"
+   ],
+   "rubric": "Head, pain, sides, left"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "laterality",
+   "match": [
+    "alternating"
+   ],
+   "rubric": "Head, pain, sides, one side"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "throbbing",
+    "pulsating",
+    "pounding",
+    "beating"
+   ],
+   "rubric": "Head, pain, pulsating"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "pressing",
+    "band",
+    "tight",
+    "squeezing",
+    "heavy"
+   ],
+   "rubric": "Head, pain, pressing"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "stitching",
+    "stabbing",
+    "shooting",
+    "sharp"
+   ],
+   "rubric": "Head, pain, stitching"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "burning"
+   ],
+   "rubric": "Head, pain, burning"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "bursting",
+    "splitting"
+   ],
+   "rubric": "Head, pain, bursting"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "dull",
+    "aching"
+   ],
+   "rubric": "Head, pain, dull pain"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "sensation",
+   "match": [
+    "tearing"
+   ],
+   "rubric": "Head, pain, tearing"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "location",
+   "match": [
+    "forehead",
+    "frontal"
+   ],
+   "rubric": "Head, pain, forehead"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "location",
+   "match": [
+    "occiput",
+    "occipital",
+    "back of head"
+   ],
+   "rubric": "Head, pain, occiput"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "location",
+   "match": [
+    "temples",
+    "temple",
+    "temporal"
+   ],
+   "rubric": "Head, pain, temples"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "location",
+   "match": [
+    "vertex",
+    "top of head"
+   ],
+   "rubric": "Head, pain, vertex"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "aggravating",
+   "match": [
+    "sun",
+    "sunlight",
+    "sun exposure",
+    "heat of sun"
+   ],
+   "rubric": "Head, pain, sun, from exposure to agg."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "aggravating",
+   "match": [
+    "movement",
+    "motion",
+    "walking",
+    "physical activity",
+    "exertion"
+   ],
+   "rubric": "Head, pain, motion, from agg."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "aggravating",
+   "match": [
+    "light",
+    "bright light"
+   ],
+   "rubric": "Head, pain, light, in general, from agg."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "aggravating",
+   "match": [
+    "noise",
+    "sound"
+   ],
+   "rubric": "Head, pain, noise, from"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "aggravating",
+   "match": [
+    "stooping",
+    "bending"
+   ],
+   "rubric": "Head, pain, stooping, from agg."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "relieving",
+   "match": [
+    "pressure",
+    "firm pressure",
+    "pressing"
+   ],
+   "rubric": "Head, pain, pressure, amel."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "relieving",
+   "match": [
+    "lying down",
+    "lying",
+    "rest"
+   ],
+   "rubric": "Head, pain, lying, amel."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "relieving",
+   "match": [
+    "dark room",
+    "darkness"
+   ],
+   "rubric": "Head, pain, lying, in a dark room, amel."
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "relieving",
+   "match": [
+    "vomiting"
+   ],
+   "rubric": "Head, pain, vomiting, amel."
+  },
+  {
+   "symptomId": "sym_sore_throat",
+   "field": "aggravating",
+   "match": [
+    "swallowing"
+   ],
+   "rubric": "Throat, pain, swallowing"
+  },
+  {
+   "symptomId": "sym_headache",
+   "field": "concomitant",
+   "match": [
+    "sym_nausea"
+   ],
+   "rubric": "Head, pain, nausea, with"
+  }
+ ],
+ "caseTakingQuestions": [
+  {
+   "id": "hq_modalities",
+   "question": "What makes the complaint better or worse (time of day, weather, motion, rest, pressure, warmth/cold, eating)?",
+   "priority": "high"
+  },
+  {
+   "id": "hq_sensation",
+   "question": "How exactly does the complaint feel (throbbing, pressing, burning, stitching, bursting)?",
+   "priority": "high"
+  },
+  {
+   "id": "hq_laterality",
+   "question": "Which side is affected, and does it move from side to side?",
+   "priority": "medium"
+  },
+  {
+   "id": "hq_causation",
+   "question": "Was there a clear causation or trigger (exposure to sun, cold, grief, fright, overeating)?",
+   "priority": "medium"
+  },
+  {
+   "id": "hq_concomitants",
+   "question": "What other symptoms occur at the same time (nausea, thirst, chill, perspiration)?",
+   "priority": "medium"
+  },
+  {
+   "id": "hq_mentals",
+   "question": "Any characteristic mental/emotional state accompanying the complaint?",
+   "priority": "low"
+  },
+  {
+   "id": "hq_time",
+   "question": "Is there a characteristic time of onset or aggravation?",
+   "priority": "low"
+  }
+ ]
+}

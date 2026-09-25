@@ -1,0 +1,1589 @@
+[
+ {
+  "id": "sym_headache",
+  "label": "Headache",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "head pain",
+   "head ache",
+   "cephalalgia",
+   "sar dard",
+   "sir dard",
+   "sirdard",
+   "high bp headache"
+  ],
+  "ayurvedaTerms": [
+   "shirahshula"
+  ],
+  "repertoryChapter": "Head",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R51",
+    "display": "Headache",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_fever",
+  "label": "Fever",
+  "bodySystem": "general",
+  "synonyms": [
+   "pyrexia",
+   "high temperature",
+   "bukhar",
+   "bukhaar",
+   "febrile",
+   "temperature"
+  ],
+  "ayurvedaTerms": [
+   "jwara"
+  ],
+  "repertoryChapter": "Fever",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R50.9",
+    "display": "Fever, unspecified",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_chills",
+  "label": "Chills / rigors",
+  "bodySystem": "general",
+  "synonyms": [
+   "rigors",
+   "shivering",
+   "kapkapi"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Chill",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_cough",
+  "label": "Cough",
+  "bodySystem": "respiratory",
+  "synonyms": [
+   "khansi",
+   "khaansi"
+  ],
+  "ayurvedaTerms": [
+   "kasa"
+  ],
+  "repertoryChapter": "Cough",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R05",
+    "display": "Cough",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_sore_throat",
+  "label": "Sore throat",
+  "bodySystem": "ent",
+  "synonyms": [
+   "throat pain",
+   "gala dard",
+   "painful swallowing"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Throat",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_runny_nose",
+  "label": "Runny nose",
+  "bodySystem": "ent",
+  "synonyms": [
+   "rhinorrhoea",
+   "rhinorrhea",
+   "nose running",
+   "naak behna",
+   "coryza"
+  ],
+  "ayurvedaTerms": [
+   "pratishyaya"
+  ],
+  "repertoryChapter": "Nose",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_sneezing",
+  "label": "Sneezing",
+  "bodySystem": "ent",
+  "synonyms": [
+   "chheenk",
+   "sneezes"
+  ],
+  "ayurvedaTerms": [
+   "pratishyaya"
+  ],
+  "repertoryChapter": "Nose",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_nasal_congestion",
+  "label": "Nasal congestion",
+  "bodySystem": "ent",
+  "synonyms": [
+   "blocked nose",
+   "stuffy nose",
+   "naak band"
+  ],
+  "ayurvedaTerms": [
+   "pratishyaya"
+  ],
+  "repertoryChapter": "Nose",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_itchy_eyes",
+  "label": "Itchy, watery eyes",
+  "bodySystem": "ent",
+  "synonyms": [
+   "watery eyes",
+   "eye itching",
+   "allergic eyes"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Eye",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_nausea",
+  "label": "Nausea",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "queasy",
+   "ji machlana",
+   "feeling sick"
+  ],
+  "ayurvedaTerms": [
+   "chhardi"
+  ],
+  "repertoryChapter": "Stomach",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R11",
+    "display": "Nausea and vomiting",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_vomiting",
+  "label": "Vomiting",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "emesis",
+   "ulti",
+   "throwing up"
+  ],
+  "ayurvedaTerms": [
+   "chhardi"
+  ],
+  "repertoryChapter": "Stomach",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R11",
+    "display": "Nausea and vomiting",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_diarrhoea",
+  "label": "Diarrhoea",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "diarrhea",
+   "loose stools",
+   "loose motions",
+   "dast"
+  ],
+  "ayurvedaTerms": [
+   "atisara"
+  ],
+  "repertoryChapter": "Rectum",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_constipation",
+  "label": "Constipation",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "kabz",
+   "kabj",
+   "hard stools"
+  ],
+  "ayurvedaTerms": [
+   "vibandha"
+  ],
+  "repertoryChapter": "Rectum",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "K59.0",
+    "display": "Constipation",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_abdominal_pain",
+  "label": "Abdominal pain",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "stomach ache",
+   "pet dard",
+   "belly pain",
+   "tummy pain"
+  ],
+  "ayurvedaTerms": [
+   "udarashula"
+  ],
+  "repertoryChapter": "Abdomen",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R10.4",
+    "display": "Other and unspecified abdominal pain",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_heartburn",
+  "label": "Heartburn",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "acidity",
+   "burning in chest after food",
+   "pyrosis",
+   "seene mein jalan"
+  ],
+  "ayurvedaTerms": [
+   "amlapitta"
+  ],
+  "repertoryChapter": "Stomach",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R12",
+    "display": "Heartburn",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_acid_regurgitation",
+  "label": "Acid regurgitation",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "sour belching",
+   "khatti dakar",
+   "reflux",
+   "sour burps"
+  ],
+  "ayurvedaTerms": [
+   "amlapitta"
+  ],
+  "repertoryChapter": "Stomach",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_indigestion",
+  "label": "Indigestion / dyspepsia",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "dyspepsia",
+   "badhazmi",
+   "epigastric discomfort",
+   "upper abdominal discomfort",
+   "fullness after meals"
+  ],
+  "ayurvedaTerms": [
+   "ajirna",
+   "agnimandya"
+  ],
+  "repertoryChapter": "Stomach",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "K30",
+    "display": "Functional dyspepsia",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_bloating",
+  "label": "Bloating",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "gas",
+   "flatulence",
+   "distension",
+   "afara"
+  ],
+  "ayurvedaTerms": [
+   "adhmana"
+  ],
+  "repertoryChapter": "Abdomen",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_loss_of_appetite",
+  "label": "Loss of appetite",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "anorexia",
+   "poor appetite",
+   "bhookh na lagna"
+  ],
+  "ayurvedaTerms": [
+   "aruchi",
+   "agnimandya"
+  ],
+  "repertoryChapter": "Stomach",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R63.0",
+    "display": "Anorexia",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_fatigue",
+  "label": "Fatigue",
+  "bodySystem": "general",
+  "synonyms": [
+   "tiredness",
+   "weakness",
+   "thakan",
+   "kamzori",
+   "low energy"
+  ],
+  "ayurvedaTerms": [
+   "daurbalya"
+  ],
+  "repertoryChapter": "Generalities",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R53",
+    "display": "Malaise and fatigue",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_dizziness",
+  "label": "Dizziness",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "giddiness",
+   "vertigo",
+   "chakkar",
+   "lightheaded"
+  ],
+  "ayurvedaTerms": [
+   "bhrama"
+  ],
+  "repertoryChapter": "Vertigo",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R42",
+    "display": "Dizziness and giddiness",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_photophobia",
+  "label": "Sensitivity to light",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "photophobia",
+   "light sensitivity",
+   "light hurts eyes"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Eye",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_phonophobia",
+  "label": "Sensitivity to sound",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "phonophobia",
+   "noise sensitivity"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Hearing",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_neck_stiffness",
+  "label": "Neck stiffness",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "stiff neck",
+   "meningism"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Back",
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_visual_disturbance",
+  "label": "Visual disturbance or loss",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "blurred vision",
+   "vision loss",
+   "double vision",
+   "diplopia"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Vision",
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_confusion",
+  "label": "Confusion / altered mental state",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "disorientation",
+   "altered sensorium",
+   "drowsiness"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Mind",
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_seizure",
+  "label": "Seizure / convulsion",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "fits",
+   "convulsions",
+   "daura",
+   "mirgi"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Generalities",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R56.8",
+    "display": "Other and unspecified convulsions",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_unilateral_weakness",
+  "label": "Weakness of one side of the body",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "hemiparesis",
+   "arm weakness",
+   "one sided weakness",
+   "lakwa",
+   "paralysis"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_speech_difficulty",
+  "label": "Speech difficulty",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "slurred speech",
+   "dysarthria",
+   "aphasia",
+   "cannot speak"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_facial_droop",
+  "label": "Facial droop",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "face drooping",
+   "mouth deviation"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_unresponsive",
+  "label": "Unresponsive / reduced consciousness",
+  "bodySystem": "neuro",
+  "synonyms": [
+   "unconscious",
+   "coma",
+   "behosh",
+   "not waking"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_chest_pain",
+  "label": "Chest pain",
+  "bodySystem": "cardiovascular",
+  "synonyms": [
+   "chest tightness",
+   "seene mein dard",
+   "angina",
+   "chest pressure"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Chest",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R07.4",
+    "display": "Chest pain, unspecified",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_shortness_of_breath",
+  "label": "Shortness of breath",
+  "bodySystem": "respiratory",
+  "synonyms": [
+   "breathlessness",
+   "dyspnoea",
+   "dyspnea",
+   "saans phoolna",
+   "difficulty breathing"
+  ],
+  "ayurvedaTerms": [
+   "shwasa"
+  ],
+  "repertoryChapter": "Respiration",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R06.0",
+    "display": "Dyspnoea",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_wheeze",
+  "label": "Wheeze",
+  "bodySystem": "respiratory",
+  "synonyms": [
+   "wheezing",
+   "seeti"
+  ],
+  "ayurvedaTerms": [
+   "shwasa"
+  ],
+  "repertoryChapter": "Respiration",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_palpitations",
+  "label": "Palpitations",
+  "bodySystem": "cardiovascular",
+  "synonyms": [
+   "racing heart",
+   "dhadkan tez"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Chest",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R00.2",
+    "display": "Palpitations",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_sweating",
+  "label": "Sweating",
+  "bodySystem": "general",
+  "synonyms": [
+   "diaphoresis",
+   "paseena"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Perspiration",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_rash",
+  "label": "Rash",
+  "bodySystem": "skin",
+  "synonyms": [
+   "skin eruption",
+   "daane",
+   "hives"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Skin",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R21",
+    "display": "Rash and other nonspecific skin eruption",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_itching",
+  "label": "Itching",
+  "bodySystem": "skin",
+  "synonyms": [
+   "pruritus",
+   "khujli"
+  ],
+  "ayurvedaTerms": [
+   "kandu"
+  ],
+  "repertoryChapter": "Skin",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "L29.9",
+    "display": "Pruritus, unspecified",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_joint_pain",
+  "label": "Joint pain",
+  "bodySystem": "musculoskeletal",
+  "synonyms": [
+   "arthralgia",
+   "jodon mein dard"
+  ],
+  "ayurvedaTerms": [
+   "sandhishula"
+  ],
+  "repertoryChapter": "Extremities",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_back_pain",
+  "label": "Back pain",
+  "bodySystem": "musculoskeletal",
+  "synonyms": [
+   "kamar dard",
+   "lumbago",
+   "low back pain"
+  ],
+  "ayurvedaTerms": [
+   "katishula"
+  ],
+  "repertoryChapter": "Back",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_body_ache",
+  "label": "Body ache / myalgia",
+  "bodySystem": "musculoskeletal",
+  "synonyms": [
+   "myalgia",
+   "badan dard",
+   "muscle pain"
+  ],
+  "ayurvedaTerms": [
+   "angamarda"
+  ],
+  "repertoryChapter": "Generalities",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_insomnia",
+  "label": "Difficulty sleeping",
+  "bodySystem": "mental",
+  "synonyms": [
+   "sleeplessness",
+   "neend na aana"
+  ],
+  "ayurvedaTerms": [
+   "anidra"
+  ],
+  "repertoryChapter": "Sleep",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_anxiety",
+  "label": "Anxiety",
+  "bodySystem": "mental",
+  "synonyms": [
+   "ghabrahat",
+   "nervousness",
+   "worry"
+  ],
+  "ayurvedaTerms": [
+   "chittodvega"
+  ],
+  "repertoryChapter": "Mind",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_low_mood",
+  "label": "Low mood",
+  "bodySystem": "mental",
+  "synonyms": [
+   "sadness",
+   "udaasi",
+   "feeling low"
+  ],
+  "ayurvedaTerms": [
+   "vishada"
+  ],
+  "repertoryChapter": "Mind",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_suicidal_ideation",
+  "label": "Thoughts of self-harm or suicide",
+  "bodySystem": "mental",
+  "synonyms": [
+   "suicidal thoughts",
+   "wants to die",
+   "self harm thoughts"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Mind",
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_burning_micturition",
+  "label": "Burning on urination",
+  "bodySystem": "genitourinary",
+  "synonyms": [
+   "dysuria",
+   "peshab mein jalan"
+  ],
+  "ayurvedaTerms": [
+   "mutrakricchra"
+  ],
+  "repertoryChapter": "Urethra",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_urinary_frequency",
+  "label": "Urinary frequency",
+  "bodySystem": "genitourinary",
+  "synonyms": [
+   "frequent urination",
+   "baar baar peshab"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Bladder",
+  "codes": [],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_jaundice",
+  "label": "Jaundice",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "yellow eyes",
+   "piliya",
+   "icterus"
+  ],
+  "ayurvedaTerms": [
+   "kamala"
+  ],
+  "repertoryChapter": "Skin",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R17",
+    "display": "Unspecified jaundice",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_haematemesis",
+  "label": "Vomiting blood",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "blood in vomit",
+   "hematemesis",
+   "khoon ki ulti"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "K92.0",
+    "display": "Haematemesis",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_melaena",
+  "label": "Black, tarry stools",
+  "bodySystem": "gastrointestinal",
+  "synonyms": [
+   "melena",
+   "black stool"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "K92.1",
+    "display": "Melaena",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_bleeding_heavy",
+  "label": "Heavy or uncontrolled bleeding",
+  "bodySystem": "general",
+  "synonyms": [
+   "haemorrhage",
+   "hemorrhage",
+   "profuse bleeding"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_face_lip_swelling",
+  "label": "Swelling of face, lips or tongue",
+  "bodySystem": "skin",
+  "synonyms": [
+   "angioedema",
+   "lip swelling",
+   "tongue swelling"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_unable_to_drink",
+  "label": "Unable to drink or breastfeed",
+  "bodySystem": "paediatric",
+  "synonyms": [
+   "not feeding",
+   "refusing feeds",
+   "cannot drink"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_lethargy",
+  "label": "Lethargy / abnormal sleepiness",
+  "bodySystem": "general",
+  "synonyms": [
+   "lethargic",
+   "abnormally sleepy",
+   "floppy"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_sunken_eyes",
+  "label": "Sunken eyes",
+  "bodySystem": "general",
+  "synonyms": [
+   "eyes sunken"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_reduced_urine",
+  "label": "Reduced urine output",
+  "bodySystem": "genitourinary",
+  "synonyms": [
+   "passing little urine",
+   "oliguria"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_vaginal_bleeding",
+  "label": "Vaginal bleeding",
+  "bodySystem": "obstetric",
+  "synonyms": [
+   "bleeding per vaginum",
+   "pv bleeding"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_head_injury",
+  "label": "Recent head injury",
+  "bodySystem": "trauma",
+  "synonyms": [
+   "head trauma",
+   "sar par chot",
+   "fall on head"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_poisoning",
+  "label": "Suspected poisoning or overdose",
+  "bodySystem": "toxicology",
+  "synonyms": [
+   "overdose",
+   "poison ingestion",
+   "zeher",
+   "pesticide ingestion"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_snakebite",
+  "label": "Snakebite",
+  "bodySystem": "toxicology",
+  "synonyms": [
+   "snake bite",
+   "saanp ka kaatna"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": null,
+  "codes": [],
+  "redFlagConcept": true,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ },
+ {
+  "id": "sym_weight_loss",
+  "label": "Unintentional weight loss",
+  "bodySystem": "general",
+  "synonyms": [
+   "losing weight",
+   "vajan kam hona"
+  ],
+  "ayurvedaTerms": [],
+  "repertoryChapter": "Generalities",
+  "codes": [
+   {
+    "system": "ICD-10",
+    "code": "R63.4",
+    "display": "Abnormal weight loss",
+    "verification": "curated-pending-verification",
+    "note": "WHO ICD-10 (2019) code reference; verify against licensed ICD edition in use"
+   }
+  ],
+  "redFlagConcept": false,
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated clinical lexicon v1 (synonyms incl. romanised Hindi)",
+    "lastVerified": "2026-09-25"
+   }
+  ],
+  "verification": "curated-pending-verification"
+ }
+]

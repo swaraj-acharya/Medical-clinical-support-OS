@@ -1,0 +1,3404 @@
+{
+ "guidelines": [
+  {
+   "id": "gl_nice_cg150",
+   "title": "Headaches in over 12s: diagnosis and management (CG150)",
+   "issuer": "NICE",
+   "jurisdiction": "England & Wales (international reference)",
+   "version": "2012, last updated 2021",
+   "url": "https://www.nice.org.uk/guidance/cg150",
+   "sourceId": "nice",
+   "verification": "curated-pending-verification",
+   "note": "No ICMR/MoHFW acute-migraine guideline was verified for this build; NICE used as international reference. Content paraphrased; NICE text not reproduced."
+  },
+  {
+   "id": "gl_ichd3",
+   "title": "International Classification of Headache Disorders, 3rd edition",
+   "issuer": "International Headache Society",
+   "jurisdiction": "International",
+   "version": "2018",
+   "url": "https://ichd-3.org",
+   "sourceId": "ichd-3",
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "gl_nice_cg184",
+   "title": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184)",
+   "issuer": "NICE",
+   "jurisdiction": "England & Wales (international reference)",
+   "version": "2014, updated 2019",
+   "url": "https://www.nice.org.uk/guidance/cg184",
+   "sourceId": "nice",
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "gl_aria_2016",
+   "title": "Allergic Rhinitis and its Impact on Asthma (ARIA) guidelines — 2016 revision",
+   "issuer": "ARIA / GRADE working group",
+   "jurisdiction": "International",
+   "version": "2016 (published 2017)",
+   "url": "https://doi.org/10.1016/j.jaci.2017.03.050",
+   "sourceId": "aria",
+   "verification": "curated-pending-verification",
+   "note": "DOI to be verified by reviewer."
+  },
+  {
+   "id": "gl_who_dengue_2009",
+   "title": "Dengue: guidelines for diagnosis, treatment, prevention and control",
+   "issuer": "WHO / TDR",
+   "jurisdiction": "International (India: see NCVBDC national guidelines)",
+   "version": "2009",
+   "url": "https://www.who.int",
+   "sourceId": "who-dengue-2009",
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "gl_icmr_amu",
+   "title": "Treatment Guidelines for Antimicrobial Use in Common Syndromes",
+   "issuer": "Indian Council of Medical Research",
+   "jurisdiction": "India",
+   "version": "2nd ed. 2019 (revised edition released Nov 2022)",
+   "url": "https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Treatment_Guidelines_2019_Final.pdf",
+   "sourceId": "icmr-amu",
+   "verification": "curated-pending-verification",
+   "note": "© ICMR, all rights reserved — cited and linked only; no text reproduced."
+  },
+  {
+   "id": "gl_nice_ng84",
+   "title": "Sore throat (acute): antimicrobial prescribing (NG84)",
+   "issuer": "NICE",
+   "jurisdiction": "England & Wales (international reference)",
+   "version": "2018",
+   "url": "https://www.nice.org.uk/guidance/ng84",
+   "sourceId": "nice",
+   "verification": "curated-pending-verification"
+  }
+ ],
+ "contexts": [
+  {
+   "id": "ctx_migraine",
+   "label": "Migraine-type headache features",
+   "description": "Headache with features used by ICHD-3 migraine criteria (unilateral, pulsating, moderate/severe, aggravated by activity, nausea or photophobia+phonophobia). A context to consider — not a diagnosis; ICHD-3 also requires ≥5 attacks.",
+   "codes": [
+    {
+     "system": "ICD-10",
+     "code": "G43.9",
+     "display": "Migraine, unspecified",
+     "verification": "curated-pending-verification"
+    },
+    {
+     "system": "ICD-11",
+     "code": "8A80",
+     "display": "Migraine",
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "requires": [
+    "sym_headache"
+   ],
+   "features": [
+    {
+     "id": "unilateral",
+     "label": "Unilateral location",
+     "weight": 2,
+     "predicate": {
+      "kind": "detail",
+      "symptomId": "sym_headache",
+      "field": "laterality",
+      "anyOf": [
+       "left",
+       "right",
+       "alternating"
+      ]
+     }
+    },
+    {
+     "id": "pulsating",
+     "label": "Pulsating / throbbing quality",
+     "weight": 2,
+     "predicate": {
+      "kind": "detail",
+      "symptomId": "sym_headache",
+      "field": "sensation",
+      "anyOf": [
+       "throbbing",
+       "pulsating",
+       "pounding",
+       "beating"
+      ]
+     }
+    },
+    {
+     "id": "mod_severe",
+     "label": "Moderate or severe intensity",
+     "weight": 1,
+     "predicate": {
+      "kind": "detail",
+      "symptomId": "sym_headache",
+      "field": "severity",
+      "anyOf": [
+       "moderate",
+       "severe"
+      ]
+     }
+    },
+    {
+     "id": "activity",
+     "label": "Aggravated by routine physical activity",
+     "weight": 2,
+     "predicate": {
+      "kind": "aggravatedBy",
+      "symptomId": "sym_headache",
+      "anyOf": [
+       "movement",
+       "motion",
+       "physical activity",
+       "exertion",
+       "walking",
+       "climbing stairs",
+       "bending"
+      ]
+     }
+    },
+    {
+     "id": "nausea",
+     "label": "Nausea and/or vomiting",
+     "weight": 2,
+     "predicate": {
+      "kind": "anySymptom",
+      "symptomIds": [
+       "sym_nausea",
+       "sym_vomiting"
+      ]
+     }
+    },
+    {
+     "id": "photo_phono",
+     "label": "Photophobia and phonophobia",
+     "weight": 2,
+     "predicate": {
+      "kind": "allSymptoms",
+      "symptomIds": [
+       "sym_photophobia",
+       "sym_phonophobia"
+      ]
+     }
+    },
+    {
+     "id": "duration",
+     "label": "Attack duration up to 72 hours",
+     "weight": 1,
+     "predicate": {
+      "kind": "durationDaysAtMost",
+      "symptomId": "sym_headache",
+      "days": 3
+     }
+    }
+   ],
+   "minimumFeatures": 3,
+   "excludeIfRedFlag": true,
+   "guidelineIds": [
+    "gl_nice_cg150",
+    "gl_ichd3"
+   ],
+   "alarmFeatures": [],
+   "sources": [
+    {
+     "sourceId": "ichd-3",
+     "reference": "International Classification of Headache Disorders, 3rd edition (IHS, 2018)",
+     "lastVerified": "2026-09-25",
+     "url": "https://ichd-3.org",
+     "version": "2018"
+    },
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ctx_tension_headache",
+   "label": "Tension-type headache features",
+   "description": "Headache with ICHD-3 tension-type features (bilateral, pressing/tightening, mild–moderate, not aggravated by activity, no nausea). A context to consider — not a diagnosis.",
+   "codes": [
+    {
+     "system": "ICD-10",
+     "code": "G44.2",
+     "display": "Tension-type headache",
+     "verification": "curated-pending-verification"
+    },
+    {
+     "system": "ICD-11",
+     "code": "8A81",
+     "display": "Tension-type headache",
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "requires": [
+    "sym_headache"
+   ],
+   "features": [
+    {
+     "id": "bilateral",
+     "label": "Bilateral location",
+     "weight": 2,
+     "predicate": {
+      "kind": "detail",
+      "symptomId": "sym_headache",
+      "field": "laterality",
+      "anyOf": [
+       "bilateral"
+      ]
+     }
+    },
+    {
+     "id": "pressing",
+     "label": "Pressing / tightening quality",
+     "weight": 2,
+     "predicate": {
+      "kind": "detail",
+      "symptomId": "sym_headache",
+      "field": "sensation",
+      "anyOf": [
+       "pressing",
+       "tightening",
+       "band-like",
+       "pressure",
+       "dull",
+       "heavy"
+      ]
+     }
+    },
+    {
+     "id": "mild_mod",
+     "label": "Mild or moderate intensity",
+     "weight": 1,
+     "predicate": {
+      "kind": "detail",
+      "symptomId": "sym_headache",
+      "field": "severity",
+      "anyOf": [
+       "mild",
+       "moderate"
+      ]
+     }
+    },
+    {
+     "id": "not_activity",
+     "label": "Not aggravated by routine activity (recorded)",
+     "weight": 1,
+     "predicate": {
+      "kind": "notAggravatedBy",
+      "symptomId": "sym_headache",
+      "anyOf": [
+       "movement",
+       "motion",
+       "physical activity",
+       "exertion",
+       "walking",
+       "climbing stairs"
+      ]
+     }
+    },
+    {
+     "id": "no_nausea",
+     "label": "No nausea recorded",
+     "weight": 1,
+     "predicate": {
+      "kind": "absentSymptom",
+      "symptomId": "sym_nausea"
+     }
+    }
+   ],
+   "minimumFeatures": 3,
+   "excludeIfRedFlag": true,
+   "guidelineIds": [
+    "gl_nice_cg150",
+    "gl_ichd3"
+   ],
+   "alarmFeatures": [],
+   "sources": [
+    {
+     "sourceId": "ichd-3",
+     "reference": "International Classification of Headache Disorders, 3rd edition (IHS, 2018)",
+     "lastVerified": "2026-09-25",
+     "url": "https://ichd-3.org",
+     "version": "2018"
+    },
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ctx_dyspepsia",
+   "label": "Dyspepsia / reflux symptoms",
+   "description": "Upper-GI symptoms (heartburn, regurgitation, epigastric discomfort). Uninvestigated dyspepsia context per NICE CG184.",
+   "codes": [
+    {
+     "system": "ICD-10",
+     "code": "K30",
+     "display": "Functional dyspepsia",
+     "verification": "curated-pending-verification"
+    },
+    {
+     "system": "ICD-10",
+     "code": "K21.9",
+     "display": "Gastro-oesophageal reflux disease without oesophagitis",
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "requires": [
+    "sym_heartburn",
+    "sym_acid_regurgitation",
+    "sym_indigestion"
+   ],
+   "features": [
+    {
+     "id": "heartburn",
+     "label": "Heartburn",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_heartburn"
+     }
+    },
+    {
+     "id": "regurg",
+     "label": "Acid regurgitation",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_acid_regurgitation"
+     }
+    },
+    {
+     "id": "dyspepsia",
+     "label": "Epigastric discomfort / indigestion",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_indigestion"
+     }
+    },
+    {
+     "id": "bloating",
+     "label": "Bloating",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_bloating"
+     }
+    }
+   ],
+   "minimumFeatures": 1,
+   "excludeIfRedFlag": true,
+   "guidelineIds": [
+    "gl_nice_cg184"
+   ],
+   "alarmFeatures": [
+    {
+     "id": "alarm_age_weightloss",
+     "when": {
+      "all": [
+       {
+        "ageYears": {
+         "op": ">=",
+         "value": 55
+        }
+       },
+       {
+        "symptom": "sym_weight_loss"
+       }
+      ]
+     },
+     "text": "Age ≥ 55 with weight loss and upper-GI symptoms: consider urgent endoscopy/suspected-cancer pathway before empirical therapy (PPIs can mask symptoms).",
+     "sources": [
+      {
+       "sourceId": "nice",
+       "reference": "NICE CG184 GORD and dyspepsia in adults",
+       "lastVerified": "2026-09-25",
+       "url": "https://www.nice.org.uk/guidance/cg184",
+       "version": "2014, updated 2019"
+      },
+      {
+       "sourceId": "nice",
+       "reference": "NICE NG12 Suspected cancer: recognition and referral",
+       "lastVerified": "2026-09-25",
+       "url": "https://www.nice.org.uk/guidance/ng12"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG184 GORD and dyspepsia in adults",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg184",
+     "version": "2014, updated 2019"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ctx_allergic_rhinitis",
+   "label": "Allergic rhinitis features",
+   "description": "Sneezing, rhinorrhoea, nasal congestion and itchy eyes without fever.",
+   "codes": [
+    {
+     "system": "ICD-10",
+     "code": "J30.4",
+     "display": "Allergic rhinitis, unspecified",
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "requires": [
+    "sym_sneezing",
+    "sym_runny_nose",
+    "sym_nasal_congestion"
+   ],
+   "features": [
+    {
+     "id": "sneeze",
+     "label": "Sneezing",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_sneezing"
+     }
+    },
+    {
+     "id": "rhino",
+     "label": "Rhinorrhoea",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_runny_nose"
+     }
+    },
+    {
+     "id": "cong",
+     "label": "Nasal congestion",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_nasal_congestion"
+     }
+    },
+    {
+     "id": "eyes",
+     "label": "Itchy / watery eyes",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_itchy_eyes"
+     }
+    },
+    {
+     "id": "afebrile",
+     "label": "No fever recorded",
+     "weight": 1,
+     "predicate": {
+      "kind": "absentSymptom",
+      "symptomId": "sym_fever"
+     }
+    }
+   ],
+   "minimumFeatures": 3,
+   "excludeIfRedFlag": true,
+   "guidelineIds": [
+    "gl_aria_2016"
+   ],
+   "alarmFeatures": [],
+   "sources": [
+    {
+     "sourceId": "aria",
+     "reference": "Brożek JL et al. Allergic Rhinitis and its Impact on Asthma (ARIA) guidelines — 2016 revision. J Allergy Clin Immunol 2017",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ctx_acute_fever",
+   "label": "Acute undifferentiated fever",
+   "description": "Fever of recent onset without a localising source in the entered data. In India, consider malaria/dengue/typhoid testing per local epidemiology and season.",
+   "codes": [
+    {
+     "system": "ICD-10",
+     "code": "R50.9",
+     "display": "Fever, unspecified",
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "requires": [
+    "sym_fever"
+   ],
+   "features": [
+    {
+     "id": "fever",
+     "label": "Fever",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_fever"
+     }
+    },
+    {
+     "id": "myalgia",
+     "label": "Body ache",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_body_ache"
+     }
+    },
+    {
+     "id": "headache",
+     "label": "Headache",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_headache"
+     }
+    },
+    {
+     "id": "chills",
+     "label": "Chills",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_chills"
+     }
+    },
+    {
+     "id": "short",
+     "label": "Duration ≤ 7 days",
+     "weight": 1,
+     "predicate": {
+      "kind": "durationDaysAtMost",
+      "symptomId": "sym_fever",
+      "days": 7
+     }
+    }
+   ],
+   "minimumFeatures": 1,
+   "excludeIfRedFlag": true,
+   "guidelineIds": [
+    "gl_who_dengue_2009"
+   ],
+   "alarmFeatures": [
+    {
+     "id": "alarm_prolonged_fever",
+     "when": {
+      "durationOver": {
+       "symptomId": "sym_fever",
+       "days": 7
+      }
+     },
+     "text": "Fever lasting more than 7 days warrants investigation for a cause before symptomatic treatment alone.",
+     "sources": [
+      {
+       "sourceId": "cds-curated",
+       "reference": "Clinical safety rule — prolonged fever",
+       "lastVerified": "2026-09-25"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "sourceId": "who-dengue-2009",
+     "reference": "WHO/TDR Dengue guidelines (2009): avoid aspirin/NSAIDs",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ctx_urti",
+   "label": "Acute upper respiratory infection (common cold) features",
+   "description": "Runny nose, sore throat, cough and congestion of short duration. Usually viral and self-limiting.",
+   "codes": [
+    {
+     "system": "ICD-10",
+     "code": "J06.9",
+     "display": "Acute upper respiratory infection, unspecified",
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "requires": [
+    "sym_runny_nose",
+    "sym_sore_throat",
+    "sym_nasal_congestion",
+    "sym_cough"
+   ],
+   "features": [
+    {
+     "id": "rhino",
+     "label": "Runny nose",
+     "weight": 2,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_runny_nose"
+     }
+    },
+    {
+     "id": "throat",
+     "label": "Sore throat",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_sore_throat"
+     }
+    },
+    {
+     "id": "cough",
+     "label": "Cough",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_cough"
+     }
+    },
+    {
+     "id": "cong",
+     "label": "Nasal congestion",
+     "weight": 1,
+     "predicate": {
+      "kind": "symptom",
+      "symptomId": "sym_nasal_congestion"
+     }
+    },
+    {
+     "id": "short",
+     "label": "Duration ≤ 10 days",
+     "weight": 1,
+     "predicate": {
+      "kind": "durationDaysAtMost",
+      "symptomId": "sym_runny_nose",
+      "days": 10
+     }
+    }
+   ],
+   "minimumFeatures": 2,
+   "excludeIfRedFlag": true,
+   "guidelineIds": [
+    "gl_icmr_amu",
+    "gl_nice_ng84"
+   ],
+   "alarmFeatures": [],
+   "sources": [
+    {
+     "sourceId": "icmr-amu",
+     "reference": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2nd ed. 2019; revised 2022)",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Treatment_Guidelines_2019_Final.pdf",
+     "version": "2019"
+    },
+    {
+     "sourceId": "cochrane",
+     "reference": "Kenealy T, Arroll B. Antibiotics for the common cold and acute purulent rhinitis. Cochrane Database Syst Rev 2013",
+     "lastVerified": "2026-09-25",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044720"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  }
+ ],
+ "recommendations": [
+  {
+   "id": "rec_mig_combo",
+   "guidelineId": "gl_nice_cg150",
+   "contextId": "ctx_migraine",
+   "kind": "offer",
+   "drugIds": [
+    "drug_sumatriptan",
+    "drug_ibuprofen",
+    "drug_paracetamol"
+   ],
+   "drugClass": "triptan + NSAID or triptan + paracetamol",
+   "statement": "For acute migraine, combination therapy with an oral triptan and an NSAID, or an oral triptan and paracetamol, is recommended (NICE CG150, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_mig_mono",
+   "guidelineId": "gl_nice_cg150",
+   "contextId": "ctx_migraine",
+   "kind": "consider",
+   "drugIds": [
+    "drug_sumatriptan",
+    "drug_ibuprofen",
+    "drug_aspirin",
+    "drug_paracetamol"
+   ],
+   "drugClass": "monotherapy",
+   "statement": "Monotherapy with an oral triptan, NSAID, aspirin or paracetamol may be considered, taking patient preference and history into account (NICE CG150, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_mig_antiemetic",
+   "guidelineId": "gl_nice_cg150",
+   "contextId": "ctx_migraine",
+   "kind": "consider",
+   "drugIds": [
+    "drug_metoclopramide"
+   ],
+   "drugClass": "anti-emetic",
+   "statement": "An anti-emetic may be considered in addition to acute migraine treatment, even without nausea or vomiting (NICE CG150, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_mig_no_opioid",
+   "guidelineId": "gl_nice_cg150",
+   "contextId": "ctx_migraine",
+   "kind": "do-not-offer",
+   "drugIds": [],
+   "drugClass": "opioids / ergots",
+   "statement": "Opioids and ergots are not recommended for acute migraine treatment (NICE CG150, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_tth",
+   "guidelineId": "gl_nice_cg150",
+   "contextId": "ctx_tension_headache",
+   "kind": "consider",
+   "drugIds": [
+    "drug_aspirin",
+    "drug_paracetamol",
+    "drug_ibuprofen"
+   ],
+   "drugClass": "simple analgesia",
+   "statement": "Aspirin, paracetamol or an NSAID may be considered for acute treatment of tension-type headache (NICE CG150, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_tth_no_opioid",
+   "guidelineId": "gl_nice_cg150",
+   "contextId": "ctx_tension_headache",
+   "kind": "do-not-offer",
+   "drugIds": [],
+   "drugClass": "opioids",
+   "statement": "Opioids are not recommended for acute tension-type headache (NICE CG150, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150 Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150",
+     "version": "2012, last updated 2021"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_dys_ppi",
+   "guidelineId": "gl_nice_cg184",
+   "contextId": "ctx_dyspepsia",
+   "kind": "offer",
+   "drugIds": [
+    "drug_omeprazole",
+    "drug_pantoprazole"
+   ],
+   "drugClass": "proton pump inhibitor",
+   "statement": "For uninvestigated dyspepsia without alarm features, a full-dose PPI for 4 weeks (or H. pylori test-and-treat) is recommended; lifestyle review advised (NICE CG184, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG184 GORD and dyspepsia in adults",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg184",
+     "version": "2014, updated 2019"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_ar_antihist",
+   "guidelineId": "gl_aria_2016",
+   "contextId": "ctx_allergic_rhinitis",
+   "kind": "offer",
+   "drugIds": [
+    "drug_cetirizine"
+   ],
+   "drugClass": "oral second-generation H1-antihistamine",
+   "statement": "Oral second-generation H1-antihistamines or intranasal corticosteroids are recommended for allergic rhinitis (ARIA 2016, paraphrased). Intranasal corticosteroid records are not yet in this knowledge base.",
+   "sources": [
+    {
+     "sourceId": "aria",
+     "reference": "Brożek JL et al. Allergic Rhinitis and its Impact on Asthma (ARIA) guidelines — 2016 revision. J Allergy Clin Immunol 2017",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_fever_pcm",
+   "guidelineId": "gl_who_dengue_2009",
+   "contextId": "ctx_acute_fever",
+   "kind": "offer",
+   "drugIds": [
+    "drug_paracetamol"
+   ],
+   "drugClass": "antipyretic",
+   "statement": "Paracetamol for symptomatic fever relief; avoid aspirin and NSAIDs where dengue has not been excluded (WHO 2009, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "who-dengue-2009",
+     "reference": "WHO/TDR Dengue guidelines (2009): avoid aspirin/NSAIDs",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_urti_sympt",
+   "guidelineId": "gl_nice_ng84",
+   "contextId": "ctx_urti",
+   "kind": "consider",
+   "drugIds": [
+    "drug_paracetamol",
+    "drug_ibuprofen"
+   ],
+   "drugClass": "symptomatic analgesia",
+   "statement": "Paracetamol or ibuprofen may be advised for pain/fever in acute sore throat and common cold (NICE NG84, paraphrased).",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG84 Sore throat (acute): antimicrobial prescribing",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng84"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rec_urti_no_abx",
+   "guidelineId": "gl_icmr_amu",
+   "contextId": "ctx_urti",
+   "kind": "do-not-offer",
+   "drugIds": [
+    "drug_amoxicillin"
+   ],
+   "drugClass": "antibiotics",
+   "statement": "Antibiotics are not indicated for the common cold/viral upper respiratory infection (ICMR antimicrobial guidelines; Cochrane review 2013).",
+   "sources": [
+    {
+     "sourceId": "icmr-amu",
+     "reference": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2nd ed. 2019; revised 2022)",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Treatment_Guidelines_2019_Final.pdf",
+     "version": "2019"
+    },
+    {
+     "sourceId": "cochrane",
+     "reference": "Kenealy T, Arroll B. Antibiotics for the common cold and acute purulent rhinitis. Cochrane Database Syst Rev 2013",
+     "lastVerified": "2026-09-25",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044720"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  }
+ ],
+ "drugs": [
+  {
+   "doseForms": [
+    "tablet",
+    "oral suspension",
+    "injection"
+   ],
+   "routes": [
+    "oral",
+    "intravenous"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Crocin",
+     "country": "IN",
+     "composition": [
+      "paracetamol"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Dolo 650",
+     "country": "IN",
+     "composition": [
+      "paracetamol"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Calpol",
+     "country": "IN",
+     "composition": [
+      "paracetamol"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Tylenol",
+     "country": "US",
+     "composition": [
+      "acetaminophen"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Combiflam",
+     "country": "IN",
+     "composition": [
+      "ibuprofen",
+      "paracetamol"
+     ],
+     "verification": "curated-pending-verification",
+     "note": "Fixed-dose combination — duplicate-therapy check applies to both ingredients"
+    }
+   ],
+   "usedFor": [
+    "mild to moderate pain",
+    "fever"
+   ],
+   "contraindications": [
+    {
+     "id": "pcm_hep_severe",
+     "text": "Severe hepatic impairment or severe active liver disease",
+     "severity": "contraindicated",
+     "when": [
+      "hepatic-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — acetaminophen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=acetaminophen"
+     }
+    }
+   ],
+   "warnings": [
+    {
+     "id": "pcm_hep",
+     "text": "Hepatic impairment: increased risk of hepatotoxicity; review need and total daily intake",
+     "severity": "caution",
+     "when": [
+      "hepatic-mild",
+      "hepatic-moderate"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — acetaminophen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=acetaminophen"
+     }
+    },
+    {
+     "id": "pcm_overdose",
+     "text": "Hepatotoxicity with overdose — check all products for hidden paracetamol (combination products)",
+     "severity": "monitor",
+     "when": [
+      "any"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — acetaminophen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=acetaminophen"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "generally well tolerated at therapeutic doses",
+    "nausea"
+   ],
+   "seriousAdverseEffects": [
+    "hepatotoxicity (overdose or risk factors)",
+    "serious skin reactions (SJS/TEN, AGEP) — rare"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_paracetamol",
+   "name": "Paracetamol",
+   "genericName": "paracetamol (acetaminophen)",
+   "synonyms": [
+    "acetaminophen",
+    "apap",
+    "paracetamol",
+    "pcm"
+   ],
+   "rxcui": "161",
+   "classTags": [
+    "analgesic",
+    "antipyretic",
+    "paracetamol"
+   ],
+   "pharmacologicClass": "Non-opioid analgesic and antipyretic",
+   "whatItIs": "A widely used non-opioid pain reliever and fever reducer.",
+   "whatItDoes": "Relieves mild-to-moderate pain and lowers fever. It has little anti-inflammatory effect.",
+   "mechanism": "Mechanism not fully established; thought to act mainly in the central nervous system, including inhibition of prostaglandin synthesis, with weak peripheral anti-inflammatory activity.",
+   "composition": [
+    {
+     "id": "ing_paracetamol",
+     "name": "paracetamol",
+     "rxcui": "161"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=acetaminophen",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 161 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — acetaminophen (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=acetaminophen"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet",
+    "oral suspension"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Brufen",
+     "country": "IN",
+     "composition": [
+      "ibuprofen"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Combiflam",
+     "country": "IN",
+     "composition": [
+      "ibuprofen",
+      "paracetamol"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Advil",
+     "country": "US",
+     "composition": [
+      "ibuprofen"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Motrin",
+     "country": "US",
+     "composition": [
+      "ibuprofen"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "mild to moderate pain",
+    "fever",
+    "inflammatory pain"
+   ],
+   "contraindications": [
+    {
+     "id": "nsaid_aerd",
+     "text": "History of asthma, urticaria or allergic-type reactions after aspirin or other NSAIDs",
+     "severity": "contraindicated",
+     "when": [
+      "nsaid-sensitive-asthma",
+      "allergy:nsaid",
+      "allergy:aspirin"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_gi",
+     "text": "Active GI bleeding or active peptic ulcer",
+     "severity": "contraindicated",
+     "when": [
+      "peptic-ulcer",
+      "gi-bleed-history"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_dengue",
+     "text": "Suspected dengue / thrombocytopenia — avoid NSAIDs until excluded",
+     "severity": "avoid",
+     "when": [
+      "dengue-risk",
+      "thrombocytopenia"
+     ],
+     "source": {
+      "sourceId": "who-dengue-2009",
+      "reference": "WHO/TDR Dengue guidelines (2009): avoid aspirin/NSAIDs",
+      "lastVerified": "2026-09-25"
+     }
+    },
+    {
+     "id": "nsaid_preg",
+     "text": "Pregnancy ≥ 20 weeks — avoid NSAIDs (fetal renal dysfunction/oligohydramnios; premature ductus closure later)",
+     "severity": "avoid",
+     "when": [
+      "pregnancy-20w-plus",
+      "pregnancy-weeks-unknown"
+     ],
+     "source": {
+      "sourceId": "fda-dsc",
+      "reference": "FDA Drug Safety Communication (Oct 2020): avoid NSAIDs at ≥20 weeks of pregnancy",
+      "lastVerified": "2026-09-25",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability"
+     }
+    }
+   ],
+   "warnings": [
+    {
+     "id": "nsaid_renal",
+     "text": "Renal impairment: risk of acute kidney injury",
+     "severity": "avoid",
+     "when": [
+      "renal-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_renal_mod",
+     "text": "Moderate renal impairment: use with caution and monitor",
+     "severity": "caution",
+     "when": [
+      "renal-moderate",
+      "renal-mild"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_hf",
+     "text": "Heart failure: NSAIDs may cause fluid retention and worsen heart failure",
+     "severity": "caution",
+     "when": [
+      "heart-failure"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_cv",
+     "text": "Cardiovascular disease: increased thrombotic risk",
+     "severity": "caution",
+     "when": [
+      "ischaemic-heart-disease",
+      "stroke-history"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_elderly",
+     "text": "Age ≥ 65: higher risk of GI bleeding and renal effects",
+     "severity": "caution",
+     "when": [
+      "age-65-plus"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    },
+    {
+     "id": "nsaid_htn",
+     "text": "Hypertension may be worsened",
+     "severity": "monitor",
+     "when": [
+      "hypertension",
+      "uncontrolled-hypertension"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "dyspepsia",
+    "nausea",
+    "abdominal pain",
+    "headache",
+    "dizziness"
+   ],
+   "seriousAdverseEffects": [
+    "GI bleeding/ulceration",
+    "acute kidney injury",
+    "cardiovascular thrombotic events",
+    "severe skin reactions",
+    "anaphylactoid reactions"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_ibuprofen",
+   "name": "Ibuprofen",
+   "genericName": "ibuprofen",
+   "synonyms": [
+    "ibuprofen",
+    "brufen"
+   ],
+   "rxcui": "5640",
+   "classTags": [
+    "nsaid",
+    "analgesic"
+   ],
+   "pharmacologicClass": "Nonsteroidal anti-inflammatory drug (NSAID)",
+   "whatItIs": "A non-steroidal anti-inflammatory drug (NSAID).",
+   "whatItDoes": "Reduces pain, inflammation and fever.",
+   "mechanism": "Reversible, non-selective inhibition of cyclo-oxygenase (COX-1 and COX-2), reducing prostaglandin synthesis.",
+   "boxedWarning": "US prescription label carries boxed warnings for serious cardiovascular thrombotic events and serious gastrointestinal bleeding, ulceration and perforation; contraindicated in the setting of CABG surgery.",
+   "composition": [
+    {
+     "id": "ing_ibuprofen",
+     "name": "ibuprofen",
+     "rxcui": "5640"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 5640 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — ibuprofen (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ibuprofen"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet",
+    "dispersible tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Disprin",
+     "country": "IN",
+     "composition": [
+      "aspirin"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Ecosprin",
+     "country": "IN",
+     "composition": [
+      "aspirin"
+     ],
+     "verification": "curated-pending-verification",
+     "note": "Low-dose antiplatelet strengths — not analgesic dosing"
+    }
+   ],
+   "usedFor": [
+    "mild to moderate pain",
+    "fever",
+    "antiplatelet therapy (low dose)"
+   ],
+   "contraindications": [
+    {
+     "id": "asa_child",
+     "text": "Children and adolescents under 16 — risk of Reye's syndrome",
+     "severity": "contraindicated",
+     "when": [
+      "age-under-16"
+     ],
+     "source": {
+      "sourceId": "mhra",
+      "reference": "MHRA/CSM: aspirin not to be given to children under 16 (Reye's syndrome)",
+      "lastVerified": "2026-09-25"
+     }
+    },
+    {
+     "id": "asa_aerd",
+     "text": "Aspirin/NSAID-sensitive asthma or prior hypersensitivity",
+     "severity": "contraindicated",
+     "when": [
+      "nsaid-sensitive-asthma",
+      "allergy:nsaid",
+      "allergy:aspirin"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — aspirin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin"
+     }
+    },
+    {
+     "id": "asa_gi",
+     "text": "Active peptic ulcer or GI bleeding",
+     "severity": "contraindicated",
+     "when": [
+      "peptic-ulcer",
+      "gi-bleed-history"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — aspirin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin"
+     }
+    },
+    {
+     "id": "asa_bleed",
+     "text": "Bleeding disorders",
+     "severity": "contraindicated",
+     "when": [
+      "bleeding-disorder",
+      "thrombocytopenia"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — aspirin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin"
+     }
+    },
+    {
+     "id": "asa_dengue",
+     "text": "Suspected dengue — avoid aspirin",
+     "severity": "avoid",
+     "when": [
+      "dengue-risk"
+     ],
+     "source": {
+      "sourceId": "who-dengue-2009",
+      "reference": "WHO/TDR Dengue guidelines (2009): avoid aspirin/NSAIDs",
+      "lastVerified": "2026-09-25"
+     }
+    },
+    {
+     "id": "asa_preg",
+     "text": "Pregnancy ≥ 20 weeks at analgesic doses — avoid",
+     "severity": "avoid",
+     "when": [
+      "pregnancy-20w-plus",
+      "pregnancy-weeks-unknown"
+     ],
+     "source": {
+      "sourceId": "fda-dsc",
+      "reference": "FDA Drug Safety Communication (Oct 2020): avoid NSAIDs at ≥20 weeks of pregnancy",
+      "lastVerified": "2026-09-25",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability"
+     }
+    }
+   ],
+   "warnings": [
+    {
+     "id": "asa_renal",
+     "text": "Renal impairment",
+     "severity": "caution",
+     "when": [
+      "renal-moderate",
+      "renal-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — aspirin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin"
+     }
+    },
+    {
+     "id": "asa_elderly",
+     "text": "Age ≥ 65: GI bleeding risk",
+     "severity": "caution",
+     "when": [
+      "age-65-plus"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — aspirin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "dyspepsia",
+    "nausea"
+   ],
+   "seriousAdverseEffects": [
+    "GI bleeding",
+    "bronchospasm in aspirin-sensitive patients",
+    "Reye's syndrome (children)"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_aspirin",
+   "name": "Aspirin",
+   "genericName": "aspirin (acetylsalicylic acid)",
+   "synonyms": [
+    "acetylsalicylic acid",
+    "asa",
+    "aspirin"
+   ],
+   "rxcui": "1191",
+   "classTags": [
+    "nsaid",
+    "antiplatelet",
+    "salicylate"
+   ],
+   "pharmacologicClass": "Salicylate NSAID; antiplatelet at low dose",
+   "whatItIs": "A salicylate with analgesic, antipyretic and (at low dose) antiplatelet effects.",
+   "whatItDoes": "Relieves pain and fever; at low doses it reduces platelet aggregation.",
+   "mechanism": "Irreversible acetylation of cyclo-oxygenase (COX-1 > COX-2), reducing prostaglandin and thromboxane A2 synthesis.",
+   "composition": [
+    {
+     "id": "ing_aspirin",
+     "name": "aspirin",
+     "rxcui": "1191"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 1191 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — aspirin (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=aspirin"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet",
+    "nasal spray",
+    "injection"
+   ],
+   "routes": [
+    "oral",
+    "intranasal",
+    "subcutaneous"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Suminat",
+     "country": "IN",
+     "composition": [
+      "sumatriptan"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Imitrex",
+     "country": "US",
+     "composition": [
+      "sumatriptan"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "acute treatment of migraine with or without aura"
+   ],
+   "contraindications": [
+    {
+     "id": "trip_ihd",
+     "text": "Ischaemic heart disease or coronary vasospasm",
+     "severity": "contraindicated",
+     "when": [
+      "ischaemic-heart-disease"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_stroke",
+     "text": "History of stroke or TIA",
+     "severity": "contraindicated",
+     "when": [
+      "stroke-history"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_pvd",
+     "text": "Peripheral vascular disease",
+     "severity": "contraindicated",
+     "when": [
+      "peripheral-vascular-disease"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_htn",
+     "text": "Uncontrolled hypertension",
+     "severity": "contraindicated",
+     "when": [
+      "uncontrolled-hypertension"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_hemi",
+     "text": "Hemiplegic or basilar migraine",
+     "severity": "contraindicated",
+     "when": [
+      "hemiplegic-migraine"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_hep",
+     "text": "Severe hepatic impairment",
+     "severity": "contraindicated",
+     "when": [
+      "hepatic-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    }
+   ],
+   "warnings": [
+    {
+     "id": "trip_peds",
+     "text": "Oral tablets: safety and effectiveness not established in patients under 18 (US label)",
+     "severity": "caution",
+     "when": [
+      "age-under-18"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_preg",
+     "text": "Pregnancy/breastfeeding: review benefit and risk with current label data",
+     "severity": "caution",
+     "when": [
+      "pregnant",
+      "breastfeeding"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+     }
+    },
+    {
+     "id": "trip_moh",
+     "text": "Frequent use can cause medication-overuse headache",
+     "severity": "monitor",
+     "when": [
+      "any"
+     ],
+     "source": {
+      "sourceId": "nice",
+      "reference": "NICE CG150 Headaches in over 12s",
+      "lastVerified": "2026-09-25",
+      "url": "https://www.nice.org.uk/guidance/cg150",
+      "version": "2012, last updated 2021"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "tingling",
+    "warm/hot sensations",
+    "chest/throat tightness or pressure",
+    "dizziness",
+    "fatigue"
+   ],
+   "seriousAdverseEffects": [
+    "myocardial ischaemia/infarction",
+    "arrhythmias",
+    "stroke",
+    "serotonin syndrome"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_sumatriptan",
+   "name": "Sumatriptan",
+   "genericName": "sumatriptan",
+   "synonyms": [
+    "sumatriptan",
+    "imitrex",
+    "suminat"
+   ],
+   "rxcui": "37418",
+   "classTags": [
+    "triptan"
+   ],
+   "pharmacologicClass": "Serotonin 5-HT1B/1D receptor agonist (triptan)",
+   "whatItIs": "A migraine-specific acute treatment (triptan).",
+   "whatItDoes": "Relieves an established migraine attack; it does not prevent attacks.",
+   "mechanism": "Selective 5-HT1B/1D receptor agonist: constricts dilated cranial blood vessels and inhibits release of pro-inflammatory neuropeptides from trigeminal nerve endings.",
+   "composition": [
+    {
+     "id": "ing_sumatriptan",
+     "name": "sumatriptan",
+     "rxcui": "37418"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 37418 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet",
+    "injection",
+    "oral solution"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Perinorm",
+     "country": "IN",
+     "composition": [
+      "metoclopramide"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Reglan",
+     "country": "US",
+     "composition": [
+      "metoclopramide"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "nausea and vomiting",
+    "adjunct in acute migraine"
+   ],
+   "contraindications": [
+    {
+     "id": "mcp_infant",
+     "text": "Children under 1 year",
+     "severity": "contraindicated",
+     "when": [
+      "age-under-1"
+     ],
+     "source": {
+      "sourceId": "ema",
+      "reference": "EMA (2013): metoclopramide — restrict to short-term use (max 5 days); contraindicated under 1 year",
+      "lastVerified": "2026-09-25"
+     }
+    },
+    {
+     "id": "mcp_epilepsy",
+     "text": "Epilepsy / seizure disorder",
+     "severity": "contraindicated",
+     "when": [
+      "epilepsy"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — metoclopramide (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide"
+     }
+    },
+    {
+     "id": "mcp_gi",
+     "text": "GI haemorrhage, obstruction or perforation",
+     "severity": "contraindicated",
+     "when": [
+      "gi-bleed-history"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — metoclopramide (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide"
+     }
+    },
+    {
+     "id": "mcp_pd",
+     "text": "Parkinson's disease",
+     "severity": "contraindicated",
+     "when": [
+      "parkinsons"
+     ],
+     "source": {
+      "sourceId": "ema",
+      "reference": "EMA (2013): metoclopramide — restrict to short-term use (max 5 days); contraindicated under 1 year",
+      "lastVerified": "2026-09-25"
+     }
+    }
+   ],
+   "warnings": [
+    {
+     "id": "mcp_young",
+     "text": "Children and young adults: higher risk of acute dystonic reactions",
+     "severity": "caution",
+     "when": [
+      "age-under-18"
+     ],
+     "source": {
+      "sourceId": "ema",
+      "reference": "EMA (2013): metoclopramide — restrict to short-term use (max 5 days); contraindicated under 1 year",
+      "lastVerified": "2026-09-25"
+     }
+    },
+    {
+     "id": "mcp_duration",
+     "text": "Restrict to short-term use (EU: max 5 days)",
+     "severity": "monitor",
+     "when": [
+      "any"
+     ],
+     "source": {
+      "sourceId": "ema",
+      "reference": "EMA (2013): metoclopramide — restrict to short-term use (max 5 days); contraindicated under 1 year",
+      "lastVerified": "2026-09-25"
+     }
+    },
+    {
+     "id": "mcp_renal",
+     "text": "Renal impairment: dose adjustment per label",
+     "severity": "caution",
+     "when": [
+      "renal-moderate",
+      "renal-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — metoclopramide (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "drowsiness",
+    "restlessness",
+    "fatigue"
+   ],
+   "seriousAdverseEffects": [
+    "tardive dyskinesia",
+    "acute dystonia",
+    "neuroleptic malignant syndrome"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_metoclopramide",
+   "name": "Metoclopramide",
+   "genericName": "metoclopramide",
+   "synonyms": [
+    "metoclopramide",
+    "perinorm",
+    "reglan"
+   ],
+   "rxcui": "6915",
+   "classTags": [
+    "antiemetic",
+    "dopamine-antagonist"
+   ],
+   "pharmacologicClass": "Dopamine D2 receptor antagonist (antiemetic, prokinetic)",
+   "whatItIs": "An antiemetic that also speeds gastric emptying.",
+   "whatItDoes": "Reduces nausea and vomiting and can improve absorption of oral migraine medicines.",
+   "mechanism": "Blocks dopamine D2 receptors in the chemoreceptor trigger zone; enhances upper-GI motility.",
+   "boxedWarning": "US label boxed warning: tardive dyskinesia; avoid treatment longer than 12 weeks.",
+   "composition": [
+    {
+     "id": "ing_metoclopramide",
+     "name": "metoclopramide",
+     "rxcui": "6915"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 6915 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — metoclopramide (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "delayed-release capsule"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Omez",
+     "country": "IN",
+     "composition": [
+      "omeprazole"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Prilosec",
+     "country": "US",
+     "composition": [
+      "omeprazole"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "GORD",
+    "dyspepsia",
+    "peptic ulcer disease",
+    "H. pylori eradication (in combination)"
+   ],
+   "contraindications": [],
+   "warnings": [
+    {
+     "id": "ppi_mask",
+     "text": "May mask symptoms of gastric malignancy — assess alarm features first",
+     "severity": "caution",
+     "when": [
+      "age-55-plus"
+     ],
+     "source": {
+      "sourceId": "nice",
+      "reference": "NICE CG184 GORD and dyspepsia in adults",
+      "lastVerified": "2026-09-25",
+      "url": "https://www.nice.org.uk/guidance/cg184",
+      "version": "2014, updated 2019"
+     }
+    },
+    {
+     "id": "ppi_long",
+     "text": "Long-term use: C. difficile diarrhoea, fractures, hypomagnesaemia, vitamin B12 deficiency (per label)",
+     "severity": "monitor",
+     "when": [
+      "any"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — omeprazole (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazole"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "headache",
+    "abdominal pain",
+    "nausea",
+    "diarrhoea",
+    "flatulence"
+   ],
+   "seriousAdverseEffects": [
+    "C. difficile-associated diarrhoea",
+    "acute interstitial nephritis",
+    "hypomagnesaemia"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_omeprazole",
+   "name": "Omeprazole",
+   "genericName": "omeprazole",
+   "synonyms": [
+    "omeprazole",
+    "omez",
+    "prilosec"
+   ],
+   "rxcui": "7646",
+   "classTags": [
+    "ppi"
+   ],
+   "pharmacologicClass": "Proton pump inhibitor (PPI)",
+   "whatItIs": "A proton pump inhibitor that reduces stomach acid.",
+   "whatItDoes": "Reduces gastric acid production to relieve heartburn and allow healing of acid-related injury.",
+   "mechanism": "Irreversibly inhibits the gastric parietal-cell H+/K+-ATPase (proton pump).",
+   "composition": [
+    {
+     "id": "ing_omeprazole",
+     "name": "omeprazole",
+     "rxcui": "7646"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazole",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 7646 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — omeprazole (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazole"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "delayed-release tablet",
+    "injection"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Pan 40",
+     "country": "IN",
+     "composition": [
+      "pantoprazole"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Protonix",
+     "country": "US",
+     "composition": [
+      "pantoprazole"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "GORD",
+    "erosive oesophagitis",
+    "dyspepsia"
+   ],
+   "contraindications": [],
+   "warnings": [
+    {
+     "id": "ppi_mask2",
+     "text": "May mask symptoms of gastric malignancy — assess alarm features first",
+     "severity": "caution",
+     "when": [
+      "age-55-plus"
+     ],
+     "source": {
+      "sourceId": "nice",
+      "reference": "NICE CG184 GORD and dyspepsia in adults",
+      "lastVerified": "2026-09-25",
+      "url": "https://www.nice.org.uk/guidance/cg184",
+      "version": "2014, updated 2019"
+     }
+    },
+    {
+     "id": "ppi_long2",
+     "text": "Long-term use: C. difficile diarrhoea, fractures, hypomagnesaemia, vitamin B12 deficiency (per label)",
+     "severity": "monitor",
+     "when": [
+      "any"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — pantoprazole (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazole"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "headache",
+    "diarrhoea",
+    "nausea",
+    "abdominal pain"
+   ],
+   "seriousAdverseEffects": [
+    "C. difficile-associated diarrhoea",
+    "acute interstitial nephritis"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_pantoprazole",
+   "name": "Pantoprazole",
+   "genericName": "pantoprazole",
+   "synonyms": [
+    "pantoprazole",
+    "pan 40",
+    "protonix"
+   ],
+   "rxcui": "40790",
+   "classTags": [
+    "ppi"
+   ],
+   "pharmacologicClass": "Proton pump inhibitor (PPI)",
+   "whatItIs": "A proton pump inhibitor that reduces stomach acid.",
+   "whatItDoes": "Reduces gastric acid production to relieve reflux symptoms and heal erosive injury.",
+   "mechanism": "Irreversibly inhibits the gastric H+/K+-ATPase (proton pump).",
+   "composition": [
+    {
+     "id": "ing_pantoprazole",
+     "name": "pantoprazole",
+     "rxcui": "40790"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazole",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 40790 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — pantoprazole (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazole"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet",
+    "oral solution"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Cetzine",
+     "country": "IN",
+     "composition": [
+      "cetirizine"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Zyrtec",
+     "country": "US",
+     "composition": [
+      "cetirizine"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "allergic rhinitis",
+    "urticaria"
+   ],
+   "contraindications": [],
+   "warnings": [
+    {
+     "id": "cet_renal",
+     "text": "Renal impairment: dose adjustment per label",
+     "severity": "caution",
+     "when": [
+      "renal-moderate",
+      "renal-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — cetirizine (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=cetirizine"
+     }
+    },
+    {
+     "id": "cet_sed",
+     "text": "Drowsiness possible — caution with driving, alcohol or CNS depressants",
+     "severity": "monitor",
+     "when": [
+      "any"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — cetirizine (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=cetirizine"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "somnolence",
+    "fatigue",
+    "dry mouth"
+   ],
+   "seriousAdverseEffects": [
+    "hypersensitivity reactions (rare)"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_cetirizine",
+   "name": "Cetirizine",
+   "genericName": "cetirizine",
+   "synonyms": [
+    "cetirizine",
+    "cetzine",
+    "zyrtec"
+   ],
+   "rxcui": "20610",
+   "classTags": [
+    "antihistamine-h1"
+   ],
+   "pharmacologicClass": "Second-generation H1-receptor antagonist",
+   "whatItIs": "A second-generation antihistamine.",
+   "whatItDoes": "Relieves sneezing, runny nose and itchy, watery eyes caused by allergies.",
+   "mechanism": "Selective peripheral H1-receptor antagonist; less sedating than first-generation antihistamines.",
+   "composition": [
+    {
+     "id": "ing_cetirizine",
+     "name": "cetirizine",
+     "rxcui": "20610"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=cetirizine",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 20610 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — cetirizine (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=cetirizine"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "capsule",
+    "tablet",
+    "oral suspension"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [
+    {
+     "brand": "Mox",
+     "country": "IN",
+     "composition": [
+      "amoxicillin"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Novamox",
+     "country": "IN",
+     "composition": [
+      "amoxicillin"
+     ],
+     "verification": "curated-pending-verification"
+    },
+    {
+     "brand": "Amoxil",
+     "country": "US",
+     "composition": [
+      "amoxicillin"
+     ],
+     "verification": "curated-pending-verification"
+    }
+   ],
+   "usedFor": [
+    "susceptible bacterial infections"
+   ],
+   "contraindications": [
+    {
+     "id": "amox_allergy",
+     "text": "Hypersensitivity to penicillins or other beta-lactams",
+     "severity": "contraindicated",
+     "when": [
+      "allergy:penicillin",
+      "allergy:beta-lactam"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — amoxicillin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=amoxicillin"
+     }
+    }
+   ],
+   "warnings": [
+    {
+     "id": "amox_renal",
+     "text": "Severe renal impairment: dose adjustment per label",
+     "severity": "caution",
+     "when": [
+      "renal-severe"
+     ],
+     "source": {
+      "sourceId": "dailymed",
+      "reference": "FDA Structured Product Label — amoxicillin (search DailyMed for current set ID)",
+      "lastVerified": "2026-09-25",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=amoxicillin"
+     }
+    }
+   ],
+   "commonAdverseEffects": [
+    "diarrhoea",
+    "nausea",
+    "rash"
+   ],
+   "seriousAdverseEffects": [
+    "anaphylaxis",
+    "C. difficile-associated diarrhoea",
+    "severe cutaneous reactions"
+   ],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_amoxicillin",
+   "name": "Amoxicillin",
+   "genericName": "amoxicillin",
+   "synonyms": [
+    "amoxicillin",
+    "amoxycillin",
+    "mox",
+    "novamox",
+    "amoxil"
+   ],
+   "rxcui": "723",
+   "classTags": [
+    "antibiotic",
+    "penicillin",
+    "beta-lactam"
+   ],
+   "pharmacologicClass": "Aminopenicillin (beta-lactam antibacterial)",
+   "whatItIs": "A penicillin-class antibiotic.",
+   "whatItDoes": "Treats susceptible bacterial infections. It has no effect on viral infections such as the common cold.",
+   "mechanism": "Binds penicillin-binding proteins and inhibits bacterial cell-wall synthesis.",
+   "composition": [
+    {
+     "id": "ing_amoxicillin",
+     "name": "amoxicillin",
+     "rxcui": "723"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=amoxicillin",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 723 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — amoxicillin (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=amoxicillin"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_warfarin",
+   "name": "Warfarin",
+   "genericName": "warfarin",
+   "synonyms": [
+    "warfarin"
+   ],
+   "rxcui": "11289",
+   "classTags": [
+    "anticoagulant",
+    "vka"
+   ],
+   "pharmacologicClass": "Vitamin K antagonist anticoagulant",
+   "whatItIs": "Vitamin K antagonist anticoagulant.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Inhibits vitamin K epoxide reductase, reducing synthesis of clotting factors II, VII, IX and X.",
+   "boxedWarning": "US label boxed warning: major or fatal bleeding.",
+   "composition": [
+    {
+     "id": "ing_warfarin",
+     "name": "warfarin",
+     "rxcui": "11289"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=warfarin",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 11289 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — warfarin (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=warfarin"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_sertraline",
+   "name": "Sertraline",
+   "genericName": "sertraline",
+   "synonyms": [
+    "sertraline"
+   ],
+   "rxcui": "36437",
+   "classTags": [
+    "ssri",
+    "serotonergic"
+   ],
+   "pharmacologicClass": "Selective serotonin reuptake inhibitor (SSRI)",
+   "whatItIs": "Selective serotonin reuptake inhibitor (SSRI).",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Inhibits presynaptic serotonin reuptake.",
+   "composition": [
+    {
+     "id": "ing_sertraline",
+     "name": "sertraline",
+     "rxcui": "36437"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertraline",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 36437 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — sertraline (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertraline"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_clopidogrel",
+   "name": "Clopidogrel",
+   "genericName": "clopidogrel",
+   "synonyms": [
+    "clopidogrel"
+   ],
+   "rxcui": "32968",
+   "classTags": [
+    "antiplatelet",
+    "p2y12"
+   ],
+   "pharmacologicClass": "P2Y12 platelet inhibitor",
+   "whatItIs": "P2Y12 platelet inhibitor.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Prodrug activated by CYP2C19; irreversibly blocks the platelet P2Y12 ADP receptor.",
+   "composition": [
+    {
+     "id": "ing_clopidogrel",
+     "name": "clopidogrel",
+     "rxcui": "32968"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=clopidogrel",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 32968 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — clopidogrel (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=clopidogrel"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_amlodipine",
+   "name": "Amlodipine",
+   "genericName": "amlodipine",
+   "synonyms": [
+    "amlodipine"
+   ],
+   "rxcui": "17767",
+   "classTags": [
+    "ccb",
+    "antihypertensive"
+   ],
+   "pharmacologicClass": "Dihydropyridine calcium-channel blocker",
+   "whatItIs": "Dihydropyridine calcium-channel blocker.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Blocks L-type calcium channels in vascular smooth muscle, causing vasodilation.",
+   "composition": [
+    {
+     "id": "ing_amlodipine",
+     "name": "amlodipine",
+     "rxcui": "17767"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=amlodipine",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 17767 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — amlodipine (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=amlodipine"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_losartan",
+   "name": "Losartan",
+   "genericName": "losartan",
+   "synonyms": [
+    "losartan"
+   ],
+   "rxcui": "52175",
+   "classTags": [
+    "arb",
+    "antihypertensive"
+   ],
+   "pharmacologicClass": "Angiotensin II receptor blocker (ARB)",
+   "whatItIs": "Angiotensin II receptor blocker (ARB).",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Blocks angiotensin II type 1 receptors.",
+   "composition": [
+    {
+     "id": "ing_losartan",
+     "name": "losartan",
+     "rxcui": "52175"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=losartan",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 52175 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — losartan (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=losartan"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_lisinopril",
+   "name": "Lisinopril",
+   "genericName": "lisinopril",
+   "synonyms": [
+    "lisinopril"
+   ],
+   "rxcui": "29046",
+   "classTags": [
+    "ace-inhibitor",
+    "antihypertensive"
+   ],
+   "pharmacologicClass": "ACE inhibitor",
+   "whatItIs": "ACE inhibitor.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Inhibits angiotensin-converting enzyme, reducing angiotensin II formation.",
+   "composition": [
+    {
+     "id": "ing_lisinopril",
+     "name": "lisinopril",
+     "rxcui": "29046"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisinopril",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 29046 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — lisinopril (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisinopril"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [
+    {
+     "id": "metf_egfr",
+     "text": "eGFR < 30 mL/min/1.73m²",
+     "severity": "contraindicated",
+     "when": [
+      "renal-severe"
+     ],
+     "source": {
+      "sourceId": "fda-dsc",
+      "reference": "FDA Drug Safety Communication (Apr 2016): metformin contraindicated with eGFR < 30",
+      "lastVerified": "2026-09-25"
+     }
+    }
+   ],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_metformin",
+   "name": "Metformin",
+   "genericName": "metformin",
+   "synonyms": [
+    "metformin"
+   ],
+   "rxcui": "6809",
+   "classTags": [
+    "biguanide",
+    "antidiabetic"
+   ],
+   "pharmacologicClass": "Biguanide antidiabetic",
+   "whatItIs": "Biguanide antidiabetic.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Reduces hepatic glucose production and improves insulin sensitivity.",
+   "composition": [
+    {
+     "id": "ing_metformin",
+     "name": "metformin",
+     "rxcui": "6809"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metformin",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 6809 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — metformin (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metformin"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_lithium",
+   "name": "Lithium",
+   "genericName": "lithium",
+   "synonyms": [
+    "lithium"
+   ],
+   "rxcui": "6448",
+   "classTags": [
+    "mood-stabiliser",
+    "narrow-therapeutic-index"
+   ],
+   "pharmacologicClass": "Mood stabiliser",
+   "whatItIs": "Mood stabiliser.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Mechanism not fully established; affects neuronal signalling and second-messenger systems.",
+   "composition": [
+    {
+     "id": "ing_lithium",
+     "name": "lithium",
+     "rxcui": "6448"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lithium",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 6448 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — lithium (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lithium"
+    }
+   ]
+  },
+  {
+   "doseForms": [
+    "tablet"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "brandMappings": [],
+   "usedFor": [],
+   "contraindications": [],
+   "warnings": [],
+   "commonAdverseEffects": [],
+   "seriousAdverseEffects": [],
+   "dosingNote": "Dosing is not provided by this tool. Consult the current approved product label, the national formulary and the treating guideline.",
+   "verification": "curated-pending-verification",
+   "id": "drug_methotrexate",
+   "name": "Methotrexate",
+   "genericName": "methotrexate",
+   "synonyms": [
+    "methotrexate"
+   ],
+   "rxcui": "6851",
+   "classTags": [
+    "antimetabolite",
+    "dmard",
+    "narrow-therapeutic-index"
+   ],
+   "pharmacologicClass": "Antimetabolite / DMARD",
+   "whatItIs": "Antimetabolite / DMARD.",
+   "whatItDoes": "Listed for medication-safety checks (current medicines). Not a recommendation target in this knowledge base.",
+   "mechanism": "Inhibits dihydrofolate reductase.",
+   "composition": [
+    {
+     "id": "ing_methotrexate",
+     "name": "methotrexate",
+     "rxcui": "6851"
+    }
+   ],
+   "labelUrl": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methotrexate",
+   "sources": [
+    {
+     "sourceId": "rxnorm",
+     "reference": "RxNorm ingredient RXCUI 6851 (verify with npm run import:rxnav)",
+     "lastVerified": "2026-09-25",
+     "url": "https://mor.nlm.nih.gov/RxNav/"
+    },
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — methotrexate (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methotrexate"
+    }
+   ]
+  }
+ ],
+ "interactions": [
+  {
+   "id": "ix_anticoag_nsaid",
+   "a": "class:anticoagulant",
+   "b": "class:nsaid",
+   "severity": "major",
+   "effect": "Increased bleeding risk (additive effects on haemostasis and GI mucosa).",
+   "management": "Avoid combination where possible; prefer paracetamol; if unavoidable, monitor for bleeding.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — warfarin (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=warfarin"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_warfarin_pcm",
+   "a": "drug_warfarin",
+   "b": "drug_paracetamol",
+   "severity": "moderate",
+   "effect": "Regular paracetamol use (several days) may increase INR.",
+   "management": "Occasional use generally acceptable; monitor INR with regular use.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — warfarin (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=warfarin"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_triptan_ssri",
+   "a": "class:triptan",
+   "b": "class:ssri",
+   "severity": "moderate",
+   "effect": "Serotonin syndrome has been reported with triptans plus SSRIs/SNRIs (FDA 2006). A 2018 cohort study found the risk to be very low — evidence is conflicting.",
+   "management": "Not an absolute contraindication; counsel on serotonin-toxicity symptoms and review.",
+   "sources": [
+    {
+     "sourceId": "fda-dsc",
+     "reference": "FDA alert (July 2006): serotonin syndrome with triptans and SSRIs/SNRIs",
+     "lastVerified": "2026-09-25"
+    },
+    {
+     "sourceId": "pubmed",
+     "reference": "Orlova Y et al. Association of coprescription of triptans with SSRIs/SNRIs with serotonin syndrome. JAMA Neurol 2018;75(5):566-572",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_triptan_maoi",
+   "a": "class:triptan",
+   "b": "class:maoi",
+   "severity": "contraindicated",
+   "effect": "MAO-A inhibitors increase sumatriptan exposure.",
+   "management": "Contraindicated during and within 2 weeks of MAO-A inhibitor use (per label).",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_triptan_ergot",
+   "a": "class:triptan",
+   "b": "class:ergot",
+   "severity": "contraindicated",
+   "effect": "Additive vasospastic effects.",
+   "management": "Do not use within 24 hours of each other.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — sumatriptan (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptan"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_nsaid_acei",
+   "a": "class:nsaid",
+   "b": "class:ace-inhibitor",
+   "severity": "moderate",
+   "effect": "Reduced antihypertensive effect; risk of acute kidney injury (especially with diuretics, dehydration, elderly).",
+   "management": "Monitor BP and renal function; avoid in dehydration.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — lisinopril (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisinopril"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_nsaid_arb",
+   "a": "class:nsaid",
+   "b": "class:arb",
+   "severity": "moderate",
+   "effect": "Reduced antihypertensive effect; risk of acute kidney injury.",
+   "management": "Monitor BP and renal function; avoid in dehydration.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — losartan (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=losartan"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_nsaid_lithium",
+   "a": "class:nsaid",
+   "b": "drug_lithium",
+   "severity": "major",
+   "effect": "NSAIDs can increase lithium concentrations and toxicity.",
+   "management": "Avoid or monitor lithium levels closely.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — lithium (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lithium"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_nsaid_mtx",
+   "a": "class:nsaid",
+   "b": "drug_methotrexate",
+   "severity": "major",
+   "effect": "Reduced methotrexate clearance; risk of toxicity.",
+   "management": "Avoid or monitor closely per label.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — methotrexate (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methotrexate"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_ibu_asa",
+   "a": "drug_ibuprofen",
+   "b": "drug_aspirin",
+   "severity": "moderate",
+   "effect": "Ibuprofen may interfere with the antiplatelet effect of low-dose aspirin.",
+   "management": "If both are needed, follow label timing advice; consider alternative analgesic.",
+   "sources": [
+    {
+     "sourceId": "fda-dsc",
+     "reference": "FDA (Sept 2006): concomitant use of ibuprofen and low-dose aspirin",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_omep_clop",
+   "a": "drug_omeprazole",
+   "b": "drug_clopidogrel",
+   "severity": "major",
+   "effect": "Omeprazole inhibits CYP2C19 and reduces clopidogrel's active metabolite and antiplatelet effect.",
+   "management": "Avoid concomitant use; consider an alternative acid-reducing agent.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "Clopidogrel US label: avoid concomitant omeprazole/esomeprazole (CYP2C19 inhibition)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=clopidogrel"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_ssri_nsaid",
+   "a": "class:ssri",
+   "b": "class:nsaid",
+   "severity": "moderate",
+   "effect": "Increased risk of GI bleeding.",
+   "management": "Consider gastroprotection or an alternative analgesic.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — sertraline (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertraline"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "ix_ssri_antiplatelet",
+   "a": "class:ssri",
+   "b": "class:anticoagulant",
+   "severity": "moderate",
+   "effect": "Increased bleeding risk.",
+   "management": "Monitor for bleeding.",
+   "sources": [
+    {
+     "sourceId": "dailymed",
+     "reference": "FDA Structured Product Label — sertraline (search DailyMed for current set ID)",
+     "lastVerified": "2026-09-25",
+     "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertraline"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  }
+ ],
+ "historyConditions": [
+  {
+   "id": "cond_peptic_ulcer",
+   "label": "Peptic ulcer disease",
+   "tags": [
+    "peptic-ulcer"
+   ],
+   "synonyms": [
+    "stomach ulcer",
+    "duodenal ulcer"
+   ]
+  },
+  {
+   "id": "cond_gi_bleed",
+   "label": "Previous GI bleeding",
+   "tags": [
+    "gi-bleed-history"
+   ],
+   "synonyms": [
+    "gi bleed"
+   ]
+  },
+  {
+   "id": "cond_asthma",
+   "label": "Asthma",
+   "tags": [
+    "asthma"
+   ],
+   "synonyms": [
+    "dama"
+   ]
+  },
+  {
+   "id": "cond_nsaid_asthma",
+   "label": "Aspirin/NSAID-exacerbated respiratory disease",
+   "tags": [
+    "nsaid-sensitive-asthma",
+    "asthma"
+   ],
+   "synonyms": [
+    "aerd",
+    "aspirin sensitive asthma"
+   ]
+  },
+  {
+   "id": "cond_ihd",
+   "label": "Ischaemic heart disease",
+   "tags": [
+    "ischaemic-heart-disease"
+   ],
+   "synonyms": [
+    "angina",
+    "coronary artery disease",
+    "heart attack history",
+    "mi"
+   ]
+  },
+  {
+   "id": "cond_stroke",
+   "label": "Previous stroke or TIA",
+   "tags": [
+    "stroke-history"
+   ],
+   "synonyms": [
+    "cva",
+    "tia"
+   ]
+  },
+  {
+   "id": "cond_pvd",
+   "label": "Peripheral vascular disease",
+   "tags": [
+    "peripheral-vascular-disease"
+   ],
+   "synonyms": [
+    "pad"
+   ]
+  },
+  {
+   "id": "cond_heart_failure",
+   "label": "Heart failure",
+   "tags": [
+    "heart-failure"
+   ],
+   "synonyms": [
+    "ccf",
+    "hf"
+   ]
+  },
+  {
+   "id": "cond_hypertension",
+   "label": "Hypertension",
+   "tags": [
+    "hypertension"
+   ],
+   "synonyms": [
+    "high bp",
+    "high blood pressure",
+    "htn"
+   ]
+  },
+  {
+   "id": "cond_diabetes",
+   "label": "Diabetes mellitus",
+   "tags": [
+    "diabetes"
+   ],
+   "synonyms": [
+    "sugar",
+    "dm",
+    "type 2 diabetes"
+   ]
+  },
+  {
+   "id": "cond_ckd",
+   "label": "Chronic kidney disease",
+   "tags": [
+    "ckd",
+    "renal-moderate"
+   ],
+   "synonyms": [
+    "kidney disease",
+    "ckd"
+   ]
+  },
+  {
+   "id": "cond_liver",
+   "label": "Chronic liver disease",
+   "tags": [
+    "hepatic-moderate"
+   ],
+   "synonyms": [
+    "cirrhosis",
+    "liver disease"
+   ]
+  },
+  {
+   "id": "cond_epilepsy",
+   "label": "Epilepsy",
+   "tags": [
+    "epilepsy"
+   ],
+   "synonyms": [
+    "seizure disorder",
+    "mirgi"
+   ]
+  },
+  {
+   "id": "cond_parkinsons",
+   "label": "Parkinson's disease",
+   "tags": [
+    "parkinsons"
+   ],
+   "synonyms": [
+    "parkinson"
+   ]
+  },
+  {
+   "id": "cond_bleeding_disorder",
+   "label": "Bleeding disorder",
+   "tags": [
+    "bleeding-disorder"
+   ],
+   "synonyms": [
+    "haemophilia",
+    "hemophilia"
+   ]
+  },
+  {
+   "id": "cond_hemiplegic_migraine",
+   "label": "Hemiplegic or basilar-type migraine",
+   "tags": [
+    "hemiplegic-migraine"
+   ],
+   "synonyms": []
+  },
+  {
+   "id": "cond_depression",
+   "label": "Depression",
+   "tags": [
+    "depression"
+   ],
+   "synonyms": []
+  }
+ ],
+ "knowledge": [
+  {
+   "id": "ak_pcm_combo",
+   "topic": "Hidden paracetamol",
+   "text": "Many Indian fixed-dose combinations (e.g., cold/flu and analgesic combinations) contain paracetamol; check all current products for duplicate paracetamol.",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Duplicate-therapy safety rule",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "id": "ak_uncontrolled_htn_rule",
+   "topic": "Uncontrolled hypertension screening threshold",
+   "text": "For triptan contraindication screening this tool treats an entered BP ≥ 160/100 mmHg as 'uncontrolled hypertension' (conservative application rule; clinician to confirm).",
+   "sources": [
+    {
+     "sourceId": "cds-curated",
+     "reference": "Application safety rule",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "id": "ak_dengue_rule",
+   "topic": "Dengue-risk tag",
+   "text": "India-first rule: any fever in the case sets a 'dengue-risk' tag so NSAIDs/aspirin are excluded unless the clinician documents that dengue has been excluded.",
+   "sources": [
+    {
+     "sourceId": "who-dengue-2009",
+     "reference": "WHO/TDR Dengue guidelines (2009): avoid aspirin/NSAIDs",
+     "lastVerified": "2026-09-25"
+    }
+   ]
+  }
+ ],
+ "studies": [
+  {
+   "id": "study_orlova_2018",
+   "title": "Coprescription of triptans with SSRIs/SNRIs and serotonin syndrome",
+   "citation": "Orlova Y et al. JAMA Neurol 2018;75(5):566-572",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Orlova+triptan+serotonin+syndrome+2018",
+   "relevance": "Conflicting evidence on triptan–SSRI interaction",
+   "sourceId": "pubmed"
+  },
+  {
+   "id": "study_kenealy_2013",
+   "title": "Antibiotics for the common cold and acute purulent rhinitis",
+   "citation": "Kenealy T, Arroll B. Cochrane Database Syst Rev 2013",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044720",
+   "relevance": "No benefit of antibiotics for common cold",
+   "sourceId": "cochrane"
+  }
+ ]
+}

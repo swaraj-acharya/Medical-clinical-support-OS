@@ -1,0 +1,1275 @@
+{
+ "rules": [
+  {
+   "id": "rf_thunderclap_headache",
+   "title": "Thunderclap / sudden severe headache",
+   "category": "Neurological",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "any": [
+     {
+      "flag": "flag_thunderclap"
+     },
+     {
+      "all": [
+       {
+        "symptom": "sym_headache"
+       },
+       {
+        "detail": {
+         "symptomId": "sym_headache",
+         "field": "onset",
+         "anyOf": [
+          "sudden"
+         ]
+        }
+       },
+       {
+        "detail": {
+         "symptomId": "sym_headache",
+         "field": "severity",
+         "anyOf": [
+          "severe"
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Sudden-onset severe headache requires same-day emergency assessment to exclude subarachnoid haemorrhage and other secondary causes.",
+   "sources": [
+    {
+     "sourceId": "nhs-scotland-headache",
+     "reference": "NHS Scotland National Headache Pathway — red flags",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rightdecisions.scot.nhs.uk/borders-ref-help-toolkit/headache/1-national-headache-pathway/"
+    },
+    {
+     "sourceId": "rcem-learning",
+     "reference": "RCEM Learning — headache red flag symptoms",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rcemlearning.co.uk/?p=12491"
+    },
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG150: Headaches in over 12s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg150"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_meningism",
+   "title": "Headache or fever with neck stiffness",
+   "category": "Infection / neurological",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_neck_stiffness"
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_headache"
+       },
+       {
+        "any": [
+         {
+          "symptom": "sym_fever"
+         },
+         {
+          "vital": {
+           "name": "temperatureC",
+           "op": ">=",
+           "value": 38
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Fever/headache with neck stiffness may indicate meningitis or subarachnoid haemorrhage. Arrange emergency assessment.",
+   "sources": [
+    {
+     "sourceId": "nhs-scotland-headache",
+     "reference": "NHS Scotland National Headache Pathway — red flags",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rightdecisions.scot.nhs.uk/borders-ref-help-toolkit/headache/1-national-headache-pathway/"
+    },
+    {
+     "sourceId": "rcem-learning",
+     "reference": "RCEM Learning — headache red flag symptoms",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rcemlearning.co.uk/?p=12491"
+    },
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG240: Meningitis (bacterial) and meningococcal disease",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng240"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_stroke_signs",
+   "title": "Possible stroke (face, arm or speech)",
+   "category": "Neurological",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "any": [
+     {
+      "symptom": "sym_unilateral_weakness"
+     },
+     {
+      "symptom": "sym_speech_difficulty"
+     },
+     {
+      "symptom": "sym_facial_droop"
+     }
+    ]
+   },
+   "guidance": "New focal neurological deficit: treat as possible stroke/TIA and arrange emergency transfer.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG128: Stroke and transient ischaemic attack in over 16s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng128"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_headache_neuro",
+   "title": "Headache with visual loss, confusion or seizure",
+   "category": "Neurological",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_headache"
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_visual_disturbance"
+       },
+       {
+        "symptom": "sym_confusion"
+       },
+       {
+        "symptom": "sym_seizure"
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Headache with new neurological symptoms warrants urgent assessment and imaging for intracranial pathology.",
+   "sources": [
+    {
+     "sourceId": "nhs-scotland-headache",
+     "reference": "NHS Scotland National Headache Pathway — red flags",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rightdecisions.scot.nhs.uk/borders-ref-help-toolkit/headache/1-national-headache-pathway/"
+    },
+    {
+     "sourceId": "rcem-learning",
+     "reference": "RCEM Learning — headache red flag symptoms",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rcemlearning.co.uk/?p=12491"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_new_progressive_headache_over_50",
+   "title": "New progressive headache over age 50",
+   "category": "Neurological",
+   "severity": "urgent",
+   "population": "adult",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_headache"
+     },
+     {
+      "ageYears": {
+       "op": ">",
+       "value": 50
+      }
+     },
+     {
+      "flag": "flag_new_progressive_headache"
+     }
+    ]
+   },
+   "guidance": "New progressive headache over 50 carries increased risk of secondary pathology (e.g., giant cell arteritis, tumour). Arrange urgent assessment.",
+   "sources": [
+    {
+     "sourceId": "nhs-scotland-headache",
+     "reference": "NHS Scotland National Headache Pathway — red flags",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rightdecisions.scot.nhs.uk/borders-ref-help-toolkit/headache/1-national-headache-pathway/"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_headache_immunocompromised",
+   "title": "Headache in immunocompromised or cancer history",
+   "category": "Neurological",
+   "severity": "urgent",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_headache"
+     },
+     {
+      "any": [
+       {
+        "flag": "flag_immunocompromised"
+       },
+       {
+        "flag": "flag_cancer_history"
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Headache in immunocompromised patients or with history of malignancy requires further investigation.",
+   "sources": [
+    {
+     "sourceId": "rcem-learning",
+     "reference": "RCEM Learning — headache red flag symptoms",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rcemlearning.co.uk/?p=12491"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_pregnancy_hypertension_symptoms",
+   "title": "Pregnancy with raised BP and headache/visual symptoms",
+   "category": "Obstetric",
+   "severity": "emergency",
+   "population": "pregnancy",
+   "when": {
+    "all": [
+     {
+      "pregnant": true
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_headache"
+       },
+       {
+        "symptom": "sym_visual_disturbance"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "vital": {
+         "name": "systolicBP",
+         "op": ">=",
+         "value": 140
+        }
+       },
+       {
+        "vital": {
+         "name": "diastolicBP",
+         "op": ">=",
+         "value": 90
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Possible pre-eclampsia. Arrange same-day obstetric assessment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG133: Hypertension in pregnancy",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng133"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_pregnancy_headache",
+   "title": "Headache in pregnancy",
+   "category": "Obstetric",
+   "severity": "urgent",
+   "population": "pregnancy",
+   "when": {
+    "all": [
+     {
+      "pregnant": true
+     },
+     {
+      "symptom": "sym_headache"
+     }
+    ]
+   },
+   "guidance": "Headache in pregnancy: check blood pressure and urine protein; consider pre-eclampsia before symptomatic treatment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG133: Hypertension in pregnancy",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng133"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_early_pregnancy_bleeding",
+   "title": "Pregnancy with vaginal bleeding or severe abdominal pain",
+   "category": "Obstetric",
+   "severity": "emergency",
+   "population": "pregnancy",
+   "when": {
+    "all": [
+     {
+      "pregnant": true
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_vaginal_bleeding"
+       },
+       {
+        "detail": {
+         "symptomId": "sym_abdominal_pain",
+         "field": "severity",
+         "anyOf": [
+          "severe"
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Bleeding or severe pain in pregnancy may indicate ectopic pregnancy, miscarriage or abruption. Arrange emergency obstetric assessment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG126: Ectopic pregnancy and miscarriage",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng126"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_acute_chest_pain",
+   "title": "Chest pain with features of acute coronary syndrome",
+   "category": "Cardiovascular",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_chest_pain"
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_sweating"
+       },
+       {
+        "symptom": "sym_shortness_of_breath"
+       },
+       {
+        "symptom": "sym_nausea"
+       },
+       {
+        "flag": "flag_chest_pain_rest"
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Chest pain with autonomic features, breathlessness or at rest: treat as possible acute coronary syndrome and arrange emergency transfer with ECG.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG95: Recent-onset chest pain of suspected cardiac origin",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg95"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_chest_pain_any",
+   "title": "Chest pain (unexplained)",
+   "category": "Cardiovascular",
+   "severity": "urgent",
+   "population": "all",
+   "when": {
+    "symptom": "sym_chest_pain"
+   },
+   "guidance": "Unexplained chest pain requires same-day clinical assessment before symptomatic treatment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG95: Recent-onset chest pain of suspected cardiac origin",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg95"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_hypoxaemia",
+   "title": "Low oxygen saturation or severe breathlessness",
+   "category": "Respiratory",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "any": [
+     {
+      "vital": {
+       "name": "spo2",
+       "op": "<",
+       "value": 90
+      }
+     },
+     {
+      "detail": {
+       "symptomId": "sym_shortness_of_breath",
+       "field": "severity",
+       "anyOf": [
+        "severe"
+       ]
+      }
+     }
+    ]
+   },
+   "guidance": "Severe respiratory distress or SpO2 < 90% is an emergency sign; give oxygen and arrange emergency care.",
+   "sources": [
+    {
+     "sourceId": "who-etat",
+     "reference": "WHO Emergency Triage Assessment and Treatment (ETAT) manual for participants",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.afro.who.int/sites/default/files/2017-06/participant_manual_0.pdf"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_reduced_consciousness",
+   "title": "Reduced consciousness",
+   "category": "Neurological",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "any": [
+     {
+      "symptom": "sym_unresponsive"
+     },
+     {
+      "vital": {
+       "name": "gcs",
+       "op": "<",
+       "value": 13
+      }
+     }
+    ]
+   },
+   "guidance": "Coma or significantly reduced consciousness is an emergency sign (ABCD).",
+   "sources": [
+    {
+     "sourceId": "who-etat",
+     "reference": "WHO Emergency Triage Assessment and Treatment (ETAT) manual for participants",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.afro.who.int/sites/default/files/2017-06/participant_manual_0.pdf"
+    },
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG232: Head injury: assessment and early management",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng232"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_seizure",
+   "title": "Seizure / convulsion",
+   "category": "Neurological",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "symptom": "sym_seizure"
+   },
+   "guidance": "Convulsions are an emergency sign; manage airway and arrange emergency care.",
+   "sources": [
+    {
+     "sourceId": "who-etat",
+     "reference": "WHO Emergency Triage Assessment and Treatment (ETAT) manual for participants",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.afro.who.int/sites/default/files/2017-06/participant_manual_0.pdf"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_severe_dehydration",
+   "title": "Signs of severe dehydration",
+   "category": "General",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "countAtLeast": {
+     "n": 2,
+     "of": [
+      {
+       "symptom": "sym_lethargy"
+      },
+      {
+       "symptom": "sym_sunken_eyes"
+      },
+      {
+       "flag": "flag_skin_pinch_slow"
+      },
+      {
+       "symptom": "sym_unable_to_drink"
+      }
+     ]
+    }
+   },
+   "guidance": "Two or more signs of severe dehydration: emergency rehydration per ETAT/IMCI.",
+   "sources": [
+    {
+     "sourceId": "who-etat",
+     "reference": "WHO Emergency Triage Assessment and Treatment (ETAT) manual for participants",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.afro.who.int/sites/default/files/2017-06/participant_manual_0.pdf"
+    },
+    {
+     "sourceId": "who-imci",
+     "reference": "WHO Integrated Management of Childhood Illness (IMCI) — general danger signs",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_child_general_danger_signs",
+   "title": "General danger sign in a child under 5",
+   "category": "Paediatric",
+   "severity": "emergency",
+   "population": "paediatric",
+   "when": {
+    "all": [
+     {
+      "ageYears": {
+       "op": "<",
+       "value": 5
+      }
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_unable_to_drink"
+       },
+       {
+        "flag": "flag_vomits_everything"
+       },
+       {
+        "symptom": "sym_seizure"
+       },
+       {
+        "symptom": "sym_lethargy"
+       },
+       {
+        "symptom": "sym_unresponsive"
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Any IMCI general danger sign requires urgent referral after pre-referral treatment.",
+   "sources": [
+    {
+     "sourceId": "who-imci",
+     "reference": "WHO Integrated Management of Childhood Illness (IMCI) — general danger signs",
+     "lastVerified": "2026-09-25"
+    },
+    {
+     "sourceId": "who-etat",
+     "reference": "WHO Emergency Triage Assessment and Treatment (ETAT) manual for participants",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.afro.who.int/sites/default/files/2017-06/participant_manual_0.pdf"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_infant_fever",
+   "title": "Fever in an infant under 3 months",
+   "category": "Paediatric",
+   "severity": "emergency",
+   "population": "paediatric",
+   "when": {
+    "all": [
+     {
+      "ageYears": {
+       "op": "<",
+       "value": 0.25
+      }
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_fever"
+       },
+       {
+        "vital": {
+         "name": "temperatureC",
+         "op": ">=",
+         "value": 38
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Infants under 3 months with temperature ≥ 38°C are high risk (NICE traffic-light 'red'). Arrange urgent paediatric assessment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG143: Fever in under 5s: assessment and initial management",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng143"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_anaphylaxis",
+   "title": "Possible anaphylaxis",
+   "category": "Allergy",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_face_lip_swelling"
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_shortness_of_breath"
+       },
+       {
+        "symptom": "sym_wheeze"
+       },
+       {
+        "vital": {
+         "name": "systolicBP",
+         "op": "<",
+         "value": 90
+        }
+       },
+       {
+        "symptom": "sym_unresponsive"
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Airway/breathing/circulation compromise with angioedema: treat as anaphylaxis (IM adrenaline per protocol) and call emergency services.",
+   "sources": [
+    {
+     "sourceId": "rcuk-anaphylaxis",
+     "reference": "Resuscitation Council UK — Emergency treatment of anaphylaxis (2021)",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.resus.org.uk"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_angioedema",
+   "title": "Swelling of face, lips or tongue",
+   "category": "Allergy",
+   "severity": "urgent",
+   "population": "all",
+   "when": {
+    "symptom": "sym_face_lip_swelling"
+   },
+   "guidance": "Angioedema needs prompt assessment for airway compromise and anaphylaxis.",
+   "sources": [
+    {
+     "sourceId": "rcuk-anaphylaxis",
+     "reference": "Resuscitation Council UK — Emergency treatment of anaphylaxis (2021)",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.resus.org.uk"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_gi_bleeding",
+   "title": "Gastrointestinal or major bleeding",
+   "category": "Bleeding",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "any": [
+     {
+      "symptom": "sym_haematemesis"
+     },
+     {
+      "symptom": "sym_melaena"
+     },
+     {
+      "symptom": "sym_bleeding_heavy"
+     }
+    ]
+   },
+   "guidance": "Suspected GI or major bleeding: assess haemodynamic status and arrange emergency care.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE CG141: Acute upper gastrointestinal bleeding in over 16s",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/cg141"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_qsofa_sepsis",
+   "title": "Possible sepsis (qSOFA ≥ 2)",
+   "category": "Infection",
+   "severity": "emergency",
+   "population": "adult",
+   "when": {
+    "countAtLeast": {
+     "n": 2,
+     "of": [
+      {
+       "vital": {
+        "name": "respiratoryRate",
+        "op": ">=",
+        "value": 22
+       }
+      },
+      {
+       "any": [
+        {
+         "symptom": "sym_confusion"
+        },
+        {
+         "vital": {
+          "name": "gcs",
+          "op": "<",
+          "value": 15
+         }
+        }
+       ]
+      },
+      {
+       "vital": {
+        "name": "systolicBP",
+        "op": "<=",
+        "value": 100
+       }
+      }
+     ]
+    }
+   },
+   "guidance": "qSOFA ≥ 2 identifies patients with suspected infection at higher risk of poor outcome. Assess for sepsis urgently.",
+   "sources": [
+    {
+     "sourceId": "sepsis-3",
+     "reference": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA 2016 — qSOFA",
+     "lastVerified": "2026-09-25",
+     "url": "https://doi.org/10.1001/jama.2016.0287"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_news2_red_parameter",
+   "title": "Single vital sign in NEWS2 red range",
+   "category": "Physiology",
+   "severity": "urgent",
+   "population": "adult",
+   "when": {
+    "any": [
+     {
+      "vital": {
+       "name": "respiratoryRate",
+       "op": "<=",
+       "value": 8
+      }
+     },
+     {
+      "vital": {
+       "name": "respiratoryRate",
+       "op": ">=",
+       "value": 25
+      }
+     },
+     {
+      "vital": {
+       "name": "spo2",
+       "op": "<=",
+       "value": 91
+      }
+     },
+     {
+      "vital": {
+       "name": "systolicBP",
+       "op": "<=",
+       "value": 90
+      }
+     },
+     {
+      "vital": {
+       "name": "systolicBP",
+       "op": ">=",
+       "value": 220
+      }
+     },
+     {
+      "vital": {
+       "name": "heartRate",
+       "op": "<=",
+       "value": 40
+      }
+     },
+     {
+      "vital": {
+       "name": "heartRate",
+       "op": ">=",
+       "value": 131
+      }
+     },
+     {
+      "vital": {
+       "name": "temperatureC",
+       "op": "<=",
+       "value": 35
+      }
+     }
+    ]
+   },
+   "guidance": "A single NEWS2 parameter scoring 3 warrants urgent clinical review.",
+   "sources": [
+    {
+     "sourceId": "rcp-news2",
+     "reference": "Royal College of Physicians — National Early Warning Score 2 (NEWS2), 2017",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.rcp.ac.uk"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_suicide_intent",
+   "title": "Suicide or self-harm with intent or plan",
+   "category": "Mental health",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "flag": "flag_suicide_intent"
+   },
+   "guidance": "Immediate safety assessment; do not leave the patient alone; arrange emergency psychiatric evaluation. Tele-MANAS (14416) is available in India for ongoing support.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG225: Self-harm: assessment, management and preventing recurrence",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng225"
+    },
+    {
+     "sourceId": "tele-manas",
+     "reference": "Tele-MANAS, Ministry of Health & Family Welfare (India) — mental health helpline 14416",
+     "lastVerified": "2026-09-25",
+     "url": "https://telemanas.mohfw.gov.in"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_suicidal_ideation",
+   "title": "Thoughts of self-harm or suicide",
+   "category": "Mental health",
+   "severity": "urgent",
+   "population": "all",
+   "when": {
+    "symptom": "sym_suicidal_ideation"
+   },
+   "guidance": "Assess risk directly and compassionately; arrange same-day mental health assessment. Tele-MANAS (14416) is available in India.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG225: Self-harm: assessment, management and preventing recurrence",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng225"
+    },
+    {
+     "sourceId": "tele-manas",
+     "reference": "Tele-MANAS, Ministry of Health & Family Welfare (India) — mental health helpline 14416",
+     "lastVerified": "2026-09-25",
+     "url": "https://telemanas.mohfw.gov.in"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_dengue_warning_signs",
+   "title": "Fever with possible dengue warning signs",
+   "category": "Infection",
+   "severity": "urgent",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "any": [
+       {
+        "symptom": "sym_fever"
+       },
+       {
+        "vital": {
+         "name": "temperatureC",
+         "op": ">=",
+         "value": 38
+        }
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "flag": "flag_mucosal_bleed"
+       },
+       {
+        "countAtLeast": {
+         "n": 2,
+         "of": [
+          {
+           "symptom": "sym_abdominal_pain"
+          },
+          {
+           "symptom": "sym_vomiting"
+          },
+          {
+           "symptom": "sym_lethargy"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "In endemic settings assess for dengue warning signs (abdominal pain, persistent vomiting, mucosal bleeding, lethargy, rising haematocrit with falling platelets). Avoid NSAIDs/aspirin until dengue is excluded.",
+   "sources": [
+    {
+     "sourceId": "who-dengue-2009",
+     "reference": "WHO/TDR — Dengue: guidelines for diagnosis, treatment, prevention and control (2009) — warning signs",
+     "lastVerified": "2026-09-25"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_head_injury_severe",
+   "title": "Head injury with neurological features",
+   "category": "Trauma",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "all": [
+     {
+      "symptom": "sym_head_injury"
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_unresponsive"
+       },
+       {
+        "symptom": "sym_confusion"
+       },
+       {
+        "symptom": "sym_vomiting"
+       },
+       {
+        "symptom": "sym_seizure"
+       },
+       {
+        "vital": {
+         "name": "gcs",
+         "op": "<",
+         "value": 15
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "Head injury with reduced GCS, vomiting, seizure or confusion requires emergency assessment and CT per protocol.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG232: Head injury: assessment and early management",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng232"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_head_injury",
+   "title": "Recent head injury",
+   "category": "Trauma",
+   "severity": "urgent",
+   "population": "all",
+   "when": {
+    "any": [
+     {
+      "symptom": "sym_head_injury"
+     },
+     {
+      "flag": "flag_major_trauma"
+     }
+    ]
+   },
+   "guidance": "Assess head injury/trauma before symptomatic treatment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG232: Head injury: assessment and early management",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng232"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_poisoning",
+   "title": "Suspected poisoning or overdose",
+   "category": "Toxicology",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "symptom": "sym_poisoning"
+   },
+   "guidance": "Manage as poisoning emergency; contact a poisons information centre and arrange emergency care.",
+   "sources": [
+    {
+     "sourceId": "mohfw-stg",
+     "reference": "MoHFW Standard Treatment Guidelines — Snakebite / Poisoning",
+     "lastVerified": "2026-09-25",
+     "url": "https://clinicalestablishments.mohfw.gov.in/en/standard-treatment-guidelines"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_snakebite",
+   "title": "Snakebite",
+   "category": "Toxicology",
+   "severity": "emergency",
+   "population": "all",
+   "when": {
+    "symptom": "sym_snakebite"
+   },
+   "guidance": "Immobilise, avoid tourniquets/incisions, and transfer urgently for assessment and antivenom per national snakebite protocol.",
+   "sources": [
+    {
+     "sourceId": "mohfw-stg",
+     "reference": "MoHFW Standard Treatment Guidelines — Snakebite / Poisoning",
+     "lastVerified": "2026-09-25",
+     "url": "https://clinicalestablishments.mohfw.gov.in/en/standard-treatment-guidelines"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_hypertensive_emergency",
+   "title": "Severely raised BP with symptoms",
+   "category": "Cardiovascular",
+   "severity": "emergency",
+   "population": "adult",
+   "when": {
+    "all": [
+     {
+      "any": [
+       {
+        "vital": {
+         "name": "systolicBP",
+         "op": ">=",
+         "value": 180
+        }
+       },
+       {
+        "vital": {
+         "name": "diastolicBP",
+         "op": ">=",
+         "value": 120
+        }
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "symptom": "sym_headache"
+       },
+       {
+        "symptom": "sym_chest_pain"
+       },
+       {
+        "symptom": "sym_confusion"
+       },
+       {
+        "symptom": "sym_visual_disturbance"
+       },
+       {
+        "symptom": "sym_shortness_of_breath"
+       }
+      ]
+     }
+    ]
+   },
+   "guidance": "BP ≥ 180/120 with symptoms or signs of target-organ damage: same-day specialist/emergency assessment.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG136: Hypertension in adults: diagnosis and management",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng136"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  },
+  {
+   "id": "rf_severe_hypertension",
+   "title": "Severely raised blood pressure",
+   "category": "Cardiovascular",
+   "severity": "urgent",
+   "population": "adult",
+   "when": {
+    "any": [
+     {
+      "vital": {
+       "name": "systolicBP",
+       "op": ">=",
+       "value": 180
+      }
+     },
+     {
+      "vital": {
+       "name": "diastolicBP",
+       "op": ">=",
+       "value": 120
+      }
+     }
+    ]
+   },
+   "guidance": "BP ≥ 180/120: repeat measurement and assess urgently for target-organ damage.",
+   "sources": [
+    {
+     "sourceId": "nice",
+     "reference": "NICE NG136: Hypertension in adults: diagnosis and management",
+     "lastVerified": "2026-09-25",
+     "url": "https://www.nice.org.uk/guidance/ng136"
+    }
+   ],
+   "verification": "curated-pending-verification"
+  }
+ ],
+ "checklist": [
+  {
+   "id": "flag_thunderclap",
+   "label": "Headache reached maximum intensity within about 1–5 minutes (thunderclap)",
+   "appliesTo": [
+    "sym_headache"
+   ]
+  },
+  {
+   "id": "flag_new_progressive_headache",
+   "label": "New headache that is progressively worsening",
+   "appliesTo": [
+    "sym_headache"
+   ]
+  },
+  {
+   "id": "flag_immunocompromised",
+   "label": "Immunocompromised (chemotherapy, HIV, long-term steroids)",
+   "appliesTo": []
+  },
+  {
+   "id": "flag_cancer_history",
+   "label": "History of cancer",
+   "appliesTo": []
+  },
+  {
+   "id": "flag_chest_pain_rest",
+   "label": "Chest pain at rest, lasting >15 minutes, or radiating to arm/jaw",
+   "appliesTo": [
+    "sym_chest_pain"
+   ]
+  },
+  {
+   "id": "flag_suicide_intent",
+   "label": "Expressed intent or plan for suicide or self-harm",
+   "appliesTo": [
+    "sym_suicidal_ideation",
+    "sym_low_mood"
+   ]
+  },
+  {
+   "id": "flag_skin_pinch_slow",
+   "label": "Skin pinch goes back very slowly (> 2 seconds)",
+   "appliesTo": [
+    "sym_diarrhoea",
+    "sym_vomiting"
+   ]
+  },
+  {
+   "id": "flag_vomits_everything",
+   "label": "Vomits everything (cannot keep anything down)",
+   "appliesTo": [
+    "sym_vomiting"
+   ]
+  },
+  {
+   "id": "flag_mucosal_bleed",
+   "label": "Bleeding from gums, nose or other mucosal bleeding",
+   "appliesTo": [
+    "sym_fever"
+   ]
+  },
+  {
+   "id": "flag_major_trauma",
+   "label": "Major trauma mechanism (road traffic accident, fall from height)",
+   "appliesTo": []
+  }
+ ]
+}

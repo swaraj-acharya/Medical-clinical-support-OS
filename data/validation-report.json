@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-09-25T19:21:06.893Z",
+  "knowledgeVersion": "1.0.0",
+  "contentHash": "61c5247445a1dd708025ea2b28569c28ff9952a6022483aa5f60b08e73943518",
+  "counts": {
+    "symptoms": 61,
+    "conditions": 6,
+    "drugs": 18,
+    "drugInteractions": 13,
+    "clinicalGuidelines": 7,
+    "guidelineRecommendations": 11,
+    "redFlags": 31,
+    "redFlagChecklist": 10,
+    "ayurvedicHerbs": 360,
+    "ayurvedicFormulations": 175,
+    "ayurvedicPrinciples": 162,
+    "homeopathyRemedies": 2432,
+    "homeopathyRubrics": 95,
+    "historyConditions": 17,
+    "sources": 76,
+    "homeopathyRubricRemedyRelations": 13237,
+    "terminologyMappings": 477,
+    "graphEdges": 3246
+  },
+  "errors": [],
+  "warnings": [
+    "Ayurveda term 'trishna' has no symptom correlate (kept for search only)",
+    "159 curated entities are 'curated-pending-verification' (require verification before clinical use)"
+  ],
+  "provenance": {
+    "entitiesChecked": 856,
+    "withSources": 856,
+    "coveragePercent": 100,
+    "byVerification": {
+      "curated-pending-verification": 159,
+      "imported-from-source": 697
+    }
+  },
+  "sources": {
+    "referenced": [
+      "amidha-herb-db",
+      "aria",
+      "bhaishajya-kalpana-kosha",
+      "cds-curated",
+      "cochrane",
+      "dailymed",
+      "ema",
+      "fda",
+      "fda-dsc",
+      "ichd-3",
+      "icmr-amu",
+      "mhra",
+      "mohfw-stg",
+      "nhmrc",
+      "nhs-scotland-headache",
+      "nice",
+      "oorep",
+      "pubmed",
+      "racgp",
+      "rcem-learning",
+      "rcp-news2",
+      "rcuk-anaphylaxis",
+      "rxnorm",
+      "sepsis-3",
+      "siddhanta-kosha",
+      "tele-manas",
+      "who-dengue-2009",
+      "who-etat",
+      "who-imci"
+    ],
+    "unreferencedInRegistry": 47,
+    "stale": [],
+    "unverifiedStatus": [
+      "ibkh",
+      "oorep-local-repertory",
+      "myhomeo",
+      "ayurvedam-data",
+      "ayucare",
+      "vedassist2",
+      "ai-ayurvedic-advisor",
+      "ayurvedacare-ai",
+      "charak-samhita-rag",
+      "ayurproject"
+    ]
+  },
+  "dataQualityNotes": [
+    "Duplicate formulation id in source dataset: form_krimi_mudgar_rasa (first record kept)",
+    "openFDA label verification not present (run npm run import:openfda on a networked machine)",
+    "RxNav RXCUI verification not present (run npm run import:rxnav on a networked machine)"
+  ]
+}

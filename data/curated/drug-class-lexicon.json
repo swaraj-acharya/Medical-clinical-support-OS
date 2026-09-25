@@ -1,0 +1,421 @@
+[
+ {
+  "classTag": "nsaid",
+  "label": "NSAIDs",
+  "members": [
+   "diclofenac",
+   "aceclofenac",
+   "naproxen",
+   "etoricoxib",
+   "celecoxib",
+   "mefenamic acid",
+   "ketorolac",
+   "indomethacin",
+   "indometacin",
+   "nimesulide",
+   "piroxicam",
+   "meloxicam",
+   "ketoprofen",
+   "etodolac",
+   "dexketoprofen",
+   "flurbiprofen"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "anticoagulant",
+  "label": "Anticoagulants",
+  "members": [
+   "apixaban",
+   "rivaroxaban",
+   "dabigatran",
+   "edoxaban",
+   "acenocoumarol",
+   "heparin",
+   "enoxaparin",
+   "dalteparin",
+   "fondaparinux"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "antiplatelet",
+  "label": "Antiplatelets",
+  "members": [
+   "prasugrel",
+   "ticagrelor",
+   "cilostazol",
+   "dipyridamole"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "ssri",
+  "label": "SSRIs",
+  "members": [
+   "fluoxetine",
+   "escitalopram",
+   "citalopram",
+   "paroxetine",
+   "fluvoxamine"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "serotonergic",
+  "label": "Other serotonergic drugs",
+  "members": [
+   "venlafaxine",
+   "desvenlafaxine",
+   "duloxetine",
+   "tramadol",
+   "linezolid",
+   "trazodone",
+   "mirtazapine",
+   "clomipramine",
+   "amitriptyline"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "maoi",
+  "label": "Monoamine oxidase inhibitors",
+  "members": [
+   "phenelzine",
+   "tranylcypromine",
+   "isocarboxazid",
+   "selegiline",
+   "rasagiline",
+   "safinamide",
+   "moclobemide"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "ergot",
+  "label": "Ergot derivatives",
+  "members": [
+   "ergotamine",
+   "dihydroergotamine",
+   "methysergide"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "triptan",
+  "label": "Triptans",
+  "members": [
+   "rizatriptan",
+   "zolmitriptan",
+   "naratriptan",
+   "eletriptan",
+   "almotriptan",
+   "frovatriptan"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "ace-inhibitor",
+  "label": "ACE inhibitors",
+  "members": [
+   "enalapril",
+   "ramipril",
+   "perindopril",
+   "captopril",
+   "fosinopril",
+   "benazepril"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "arb",
+  "label": "Angiotensin receptor blockers",
+  "members": [
+   "telmisartan",
+   "olmesartan",
+   "valsartan",
+   "irbesartan",
+   "candesartan"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "antihypertensive",
+  "label": "Antihypertensives (other)",
+  "members": [
+   "atenolol",
+   "metoprolol",
+   "bisoprolol",
+   "nebivolol",
+   "cilnidipine",
+   "nifedipine",
+   "chlorthalidone",
+   "hydrochlorothiazide",
+   "indapamide",
+   "prazosin",
+   "clonidine"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "ppi",
+  "label": "Proton pump inhibitors",
+  "members": [
+   "esomeprazole",
+   "rabeprazole",
+   "lansoprazole",
+   "dexlansoprazole"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "antidiabetic",
+  "label": "Antidiabetics",
+  "members": [
+   "glimepiride",
+   "gliclazide",
+   "glibenclamide",
+   "glipizide",
+   "sitagliptin",
+   "vildagliptin",
+   "teneligliptin",
+   "linagliptin",
+   "dapagliflozin",
+   "empagliflozin",
+   "pioglitazone",
+   "insulin",
+   "voglibose",
+   "acarbose"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "narrow-therapeutic-index",
+  "label": "Narrow therapeutic index drugs",
+  "members": [
+   "digoxin",
+   "phenytoin",
+   "carbamazepine",
+   "valproate",
+   "sodium valproate",
+   "theophylline",
+   "ciclosporin",
+   "cyclosporine",
+   "tacrolimus",
+   "levothyroxine"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "penicillin",
+  "label": "Penicillins",
+  "members": [
+   "ampicillin",
+   "cloxacillin",
+   "amoxicillin clavulanate",
+   "co-amoxiclav",
+   "piperacillin",
+   "benzathine penicillin",
+   "phenoxymethylpenicillin",
+   "flucloxacillin"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "beta-lactam",
+  "label": "Other beta-lactams (cephalosporins, carbapenems)",
+  "members": [
+   "cephalexin",
+   "cefalexin",
+   "cefadroxil",
+   "cefixime",
+   "cefuroxime",
+   "cefpodoxime",
+   "ceftriaxone",
+   "cefotaxime",
+   "cefoperazone",
+   "meropenem",
+   "imipenem"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "paracetamol",
+  "label": "Paracetamol-containing products (common Indian brands/FDCs)",
+  "members": [
+   "saridon",
+   "sinarest",
+   "coldact",
+   "d cold total",
+   "vicks action 500",
+   "febrex plus",
+   "nimulid p",
+   "zerodol p",
+   "hifenac p",
+   "dolo cold"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "antihistamine-h1",
+  "label": "H1 antihistamines",
+  "members": [
+   "levocetirizine",
+   "fexofenadine",
+   "loratadine",
+   "desloratadine",
+   "bilastine",
+   "chlorpheniramine",
+   "chlorphenamine",
+   "diphenhydramine",
+   "hydroxyzine",
+   "promethazine"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ },
+ {
+  "classTag": "dopamine-antagonist",
+  "label": "Dopamine antagonists / antiemetics",
+  "members": [
+   "domperidone",
+   "prochlorperazine",
+   "haloperidol",
+   "levosulpiride",
+   "itopride"
+  ],
+  "verification": "curated-pending-verification",
+  "sources": [
+   {
+    "sourceId": "cds-curated",
+    "reference": "Curated drug-class membership lexicon v1 (INN names; for recognising current medications not held as full drug records)",
+    "lastVerified": "2026-09-25"
+   }
+  ]
+ }
+]

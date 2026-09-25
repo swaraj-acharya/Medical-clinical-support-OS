@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-09-25T17:32:44.908Z",
+  "packs": [
+    {
+      "id": "publicum",
+      "file": "data/processed/homeopathy/publicum.pack.json.gz",
+      "sourceId": "oorep",
+      "license": "GPL-3.0-or-later",
+      "counts": {
+        "remedies": 2432,
+        "rubrics": 74667,
+        "relations": 735566
+      },
+      "sha256": "f9814a14c70052345488c8e39723962f8295dbd0b5d7eb71f38f716f3dd8452f",
+      "bytes": 1983282
+    },
+    {
+      "id": "boericke",
+      "file": "data/processed/homeopathy/boericke.pack.json.gz",
+      "sourceId": "oorep-boericke",
+      "license": "Public-domain text (first published 1906); transcription distributed in the GPL-3.0 OOREP repository",
+      "counts": {
+        "chapters": 688
+      },
+      "sha256": "b64573538768ac6c125e3fe2635363dffb107e9d4e0d13b7c1e669718b286c43",
+      "bytes": 508034
+    }
+  ]
+}
